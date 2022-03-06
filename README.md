@@ -19,13 +19,13 @@ COMPILE WITH ANDROID STUDIO.
 
 ![Screenshot_2022-03-06-20-32-56-871_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934826-86058ab3-15ce-4b91-ba4e-d83ec1241ca7.jpg)
 
-![Screenshot_2022-03-06-20-33-01-979_com emm
-![Screenshot_2022-03-06-20-33-37-294_com emmanuel emmanue
+
 ![Screenshot_2022-03-06-20-34-09-786_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934862-c6fcaa16-afa9-43c1-9ff1-6a3b39c3213a.jpg)
-lkorircv](https://user-images.githubusercontent.com/41972019/156934841-4aeb30a7-26b2-4c1e-ac8b-cbf81bbf7264.jpg)
-![Screenshot_2022-03-06-20-34-00-589_com emmanuel emm
+
+
 ![Screenshot_2022-03-06-20-34-14-150_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934863-ca05a070-b8c3-4f76-8a46-068ab381f64c.jpg)
-anuelkorircv](https://user-images.githubusercontent.com/41972019/156934855-00845e4e-e15a-4dd5-9cc5-d62e50637d3a.jpg)
+
+
 ![Screenshot_2022-03-06-20-33-52-516_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934858-d7e63a36-3c45-43e0-b2bc-81e52c232c56.jpg)
 
 
