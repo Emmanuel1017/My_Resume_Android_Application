@@ -25,8 +25,4 @@ anuelkorircv](https://user-images.githubusercontent.com/41972019/156934855-00845
 ![Screenshot_2022-03-06-20-33-52-516_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934858-d7e63a36-3c45-43e0-b2bc-81e52c232c56.jpg)
 
 
-anuel
-![Screenshot_2022-03-06-20-33-32-593_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934840-cb8f5a95-f5e0-4bf5-bb33-6c86c031e926.jpg)
- em
-![Screenshot_2022-03-06-20-33-12-998_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934836-0660f953-d0a4-41da-9141-c87d9f7203ff.jpg)
-manuelkorircv](https://user-images.githubusercontent.com/41972019/156934832-e88c6fea-70ac-4012-8a59-73b1f820ee93.jpg)
+
