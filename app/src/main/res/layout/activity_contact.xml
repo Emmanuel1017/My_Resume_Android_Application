@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Background_contacts"
+    tools:context=".Contact">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_contact"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/Multiwave_Header"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:mwhCloseColor="#00B8D4"
+            app:mwhEnableFullScreen="false"
+            app:mwhStartColor="@color/colorPrimaryDark"
+            app:mwhWaveHeight="60dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/back_button_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+
+</LinearLayout>
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_containerpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layiout"
+                app:shimmer_duration="2300"
+                app:shimmer_shape="linear">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/caribou_logo" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <TextView
+                android:id="@+id/Contact_Me_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/amaranth_bold"
+                android:text="CONTACT ME"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/blueDark"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative_contact"
+        app:shimmer_base_color="@color/colorTextDisabled"
+        app:shimmer_colored="true"
+        app:shimmer_duration="1500"
+        app:shimmer_highlight_color="#AA00FF"
+        app:shimmer_repeat_mode="reverse"
+        app:shimmer_shape="linear">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/amaranth_bold"
+            android:gravity="center_horizontal"
+
+            android:text="CARIBOU DEVS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:id="@+id/computer_science"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/irsansb"
+        android:text="@string/android_developer_java_competitive_programmer_loves_to_talk_on_tech"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorTextDisabled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmer_view_container_name" />
+
+    <LinearLayout
+        android:id="@+id/linearview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:orientation="horizontal"
+        android:gravity="center|center_horizontal"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/computer_science">
+
+
+        <View
+            android:id="@+id/view_contact_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:foregroundGravity="center|center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="440dp" />
+
+        <TextView
+            android:id="@+id/Contacts_textview"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center|center_horizontal"
+            android:text="contacts"
+            android:textAlignment="center"
+            android:textColor="#090909" />
+
+        <View
+            android:id="@+id/view_contact_2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:foregroundGravity="center|center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="440dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearview1">
+
+        <ImageButton
+            android:id="@+id/linkedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/linkedin"
+            app:srcCompat="@drawable/ic_linkedin" />
+
+        <ImageButton
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/github"
+            app:srcCompat="@drawable/ic_github" />
+
+        <ImageButton
+            android:id="@+id/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/twitter"
+            app:srcCompat="@drawable/ic_baseline_email" />
+        <ImageButton
+            android:id="@+id/whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/linkedin"
+            app:srcCompat="@drawable/ic_whatsapp" />
+        <ImageView
+            android:id="@+id/Callimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/call_me"
+            app:srcCompat="@drawable/ic_baseline_local_phone_24" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:srcCompat="@drawable/ic_internet" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

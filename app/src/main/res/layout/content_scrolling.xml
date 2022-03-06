@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="@dimen/app_bar_height"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/my_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text=""
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/blueDark" />
+
+            <TextView
+                android:id="@+id/My_information_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/large_text"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+
+
+                <View
+                    android:id="@+id/view2_mydta"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:foregroundGravity="center|center_horizontal"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="440dp" />
+
+                <TextView
+                    android:id="@+id/text_view_myskills"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0.6"
+                    android:text="My skills"
+                    android:textAlignment="center"
+                    android:textColor="@color/blueDark"
+                    android:textSize="16dp" />
+
+                <View
+                    android:id="@+id/view3_mydata"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:foregroundGravity="center|center_horizontal"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="440dp" />
+
+
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/programming_skills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif"
+                android:text="Some of my skills in programming include:"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+
+
+
+
+                <com.hanks.htextview.typer.TyperTextView
+                    android:id="@+id/Line_Htext_View"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="right"
+                    android:padding="3dp"
+                    android:paddingRight="10dp"
+                    android:text="This is LineTextView\nToday is Monday"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="27dp"
+                    app:animationDuration="2000"
+                    app:lineColor="#1367bc"
+                    app:lineWidth="6dp"
+                    app:typerSpeed="80"
+                    />
+
+            </LinearLayout>
+
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+               android:layout_marginBottom="30dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="Python"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#ffaa66cc"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="java"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#ff669900"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#D50000"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="C#"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#F40571"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="C++"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#FFAB00"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="ANGULAR"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#FFD600"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="PHP"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00258C"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="HTML/CSS"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00BFA5"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="JAVASCRIPT"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#2962FF"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="VUE"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#C51162"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="REACT"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00B8D4"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="SHELL"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00C853"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="SSL"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#000000"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="KOTLIN"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#FF6D00"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="DART"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#D50000"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="RUBY"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#0091EA"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="VB"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#DD2C00"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="KOTLIN"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#AA00FF"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="React-native"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#6200EA"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="OpenCv"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00BFA5"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="CISCO"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#FFD600"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="SSL"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#00FF6A"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:text="Go"
+                    app:tagColor="@color/black"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+
+                <com.veinhorn.tagview.TagView
+                    android:id="@+id/tagView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="Daraja"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:tagColor="#0091EA"
+                    app:tagType="modern_trapezium_reversed"
+                    app:tagUpperCase="true" />
+            </LinearLayout>
+
+
+
+         </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

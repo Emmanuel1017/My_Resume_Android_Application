@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#15299C</color>
+    <color name="colorPrimaryDark">#15299C</color>
+    <color name="colorAccent">#0E0E0E</color>
+    <color name="black_overlay">#66070707</color>
+    <color name="primaryTextColor">#8E8E8E</color>
+
+    <color name="transparent">#52888888</color>
+    <color name="transparentWhite">#00000000</color>
+
+    <color name="pink">#F30570</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="message_bubble_grey">#e0e0e0</color>
+
+    <color name="light_blue">#00BCD4</color>
+    <color name="grey">#B96B6B6B</color>
+    <color name="darkModeBackground">#4E4E4E</color>
+
+    <color name="colorTextDisabled">#888686</color>
+    <color name="colorTextPlaceholder">#8A000000</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorShaft">#95303030</color>
+    <color name="colorGreen">#3fb562</color>
+    <color name="blue">#2879C9</color>
+    <color name="blueDark">#15299C</color>
+    <color name="colorBlue_01">#448AFF</color>
+    <color name="colorRed_01">#FF1744</color>
+
+
+    <color name="first1">#00B8D4</color>
+    <color name="second">#0091EA</color>
+    <color name="seven">#FF6D00</color>
+    <color name="third">#FFD600</color>
+    <color name="third1">#00C853</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+
+    <color name="cardColor">#ffffff</color>
+    <color name="textcardColor">#00B8D4</color>
+
+
+</resources>

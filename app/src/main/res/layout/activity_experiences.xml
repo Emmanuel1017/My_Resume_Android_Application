@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Main_Layout_Experiences"
+    tools:context=".Experiences">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="?actionBarSize"
+            android:orientation="vertical"
+          >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                >
+
+            <TextView
+                android:id="@+id/Experiences_Textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blueDark"
+                android:text="MY EXPERIENCES"
+                android:fontFamily="sans-serif-black"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+
+            <pl.hypeapp.materialtimelineview.MaterialTimelineView
+                android:id="@+id/material_timeline_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:timeline_bottom_radio_color="@color/colorPrimaryDark"
+                app:timeline_line_color="@color/colorPrimaryDark"
+                app:timeline_margin_start="32dp"
+
+                app:timeline_position="first"
+                app:timeline_radio_outline_radius="10"
+                app:timeline_radio_radius="12"
+                app:timeline_top_radio_color="@color/colorPrimary"
+                app:timeline_type="item">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/my_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/cardColor"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/Experiences_Card1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/gradient_card"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/kura"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+                                android:text="Kenya Urban Roads Authority"
+                                android:textColor="@color/white"
+                                android:textSize="19dp"
+                               />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:text="Eldoret,Kenya"
+                                    android:textColor="@color/white"
+                                    android:textSize="17dp"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="left"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="left">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+
+                                android:text="2018"
+                                android:textColor="@color/white"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+                                android:layout_marginLeft="20dp"
+                                android:text="ICT Intern"
+                                android:textColor="@color/white"
+                                android:textSize="17dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:textAlignment="center"
+                            android:text="Kenya Urban Roads Authority is a statutory body established by the Kenya Roads Acts, 2007.The Act also established other Roads Authority (RAs) and provided for their powers and functions as stipulated within the Act. In line with this, the Authority started its operations in the FY 2007/2008.KURA is responsible for the management, development, rehabilitation and maintenance of National Trunk Roads in the urban areas of the Republic of Kenya. I was on attachment in the ICT department at the organization for the specified period. My roles included network administration , linux and windows installation and user support, Software consultation and ICT desk  support. It was a great learning experience introducing me to the professional world."
+                        />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </pl.hypeapp.materialtimelineview.MaterialTimelineView>
+
+            <pl.hypeapp.materialtimelineview.MaterialTimelineView
+                android:id="@+id/material_timeline_viewmiddle5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                app:timeline_bottom_radio_color="@color/blueDark"
+                app:timeline_line_color="@color/colorPrimary"
+                app:timeline_margin_start="32dp"
+                app:timeline_position="middle"
+                app:timeline_radio_outline_radius="20"
+                app:timeline_radio_radius="12"
+                app:timeline_top_radio_color="@color/blueDark"
+                app:timeline_type="line">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:foregroundGravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/Experiences_Textview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="sans-serif-black"
+                        android:screenReaderFocusable="true"
+                        android:text="2019-present"
+                        android:textAlignment="center"
+                        android:textColor="@color/blueDark" />
+
+                    <TextView
+                        android:id="@+id/Experiences_Textview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:screenReaderFocusable="true"
+                        android:text="Software consultancy"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </pl.hypeapp.materialtimelineview.MaterialTimelineView>
+
+
+
+            <pl.hypeapp.materialtimelineview.MaterialTimelineView
+                android:id="@+id/material_timeline_view5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:timeline_bottom_radio_color="@color/colorPrimaryDark"
+                app:timeline_line_color="@color/colorPrimaryDark"
+                app:timeline_margin_start="32dp"
+                app:timeline_position="last"
+                app:timeline_radio_outline_radius="10"
+                app:timeline_radio_radius="12"
+                app:timeline_top_radio_color="@color/colorPrimary"
+                app:timeline_type="item">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/my_card_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/cardColor"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/Experiences_Card2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/gradient_card"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/caribou_logo"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:text="CARIBOU DEVS"
+                                    android:textColor="@color/white"
+                                    android:textSize="19dp"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-black"
+                                    android:text="Eldoret,Kenya"
+                                    android:textColor="@color/white"
+                                    android:textSize="17dp"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="left"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="left">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+
+                                android:text="2020"
+                                android:textColor="@color/white"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+                                android:layout_marginLeft="20dp"
+                                android:text="FullStack Developer"
+                                android:textColor="@color/white"
+                                android:textSize="17dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="17dp"
+                                android:textAlignment="center"
+                                android:text="Carobou Software Devs is a start up Software consultancy company that specializes in software development projects. It is a basic start up company based  Android,IOS, Web and ERP projects development . I also do system venerability detection, System and security consultation ,database management and network administration. The goal is to provide reliable and effiient services to fulfill customer needs. I espeially thrive in full stack web and Android development . This is that I Design, code and Deploy full working efficient bug free softwares. I view programming as an Art in which the developer actually solves a problem using programming and design which is like an artist creating a piece of art to acomplish the initial intention. So basically the feeling of creation of working softwares is a great feeling. As I like to say by taking this path I do what I like and i like what I do. "
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </pl.hypeapp.materialtimelineview.MaterialTimelineView>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/back_button_experiences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="19dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

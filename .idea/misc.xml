@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/gradient_card.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/gradient_card_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/gradient_main_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_main.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_snack.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_snack_error.xml" value="0.3765625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/ic_bg_topheader.xml" value="0.2171875" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.343359375" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.2703125" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_main.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_my_data.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_preferences.xml" value="0.2015625" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_start.xml" value="0.33" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/content_scrolling.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_downloading_layout.xml" value="0.17708333333333334" />
+        <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21770833333333334" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/dark_mode.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_1.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_2.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_3.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_card.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_card_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_main_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_preferances.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/ic_bg_topativities.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/ic_bg_topheader_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/ic_pdf_file_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/light_mode.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/onboarding_pager_circle_icon.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable-v24/prefernces_bg.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/arrow_forward.xml" value="0.225" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/circle.xml" value="0.228125" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/circle_button.xml" value="0.228125" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/circle_buttondark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/circledark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/gradient.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/gradient_main.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/gradient_snack.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/gradient_snack_error.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_android.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_apps.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_arrow_back_white.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_email_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_local_phone_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_bg_topheader.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_document_share.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_documents.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_github_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_internet_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_key.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_line_h_svgrepo_com.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_link.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_linkedin.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_linkedin_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_my_apk.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_my_cv.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_network_error.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_pdf_file.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_privacy.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_right_arrow.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_settings_svgrepo_com.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_share.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_storage.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_terms.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_whatsapp.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_whatsapp_dark.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_wifi_connected.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/ic_wifi_disconnected.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/drawable/rounded_button_drawable.xml" value="0.3765625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/font/.xml" value="0.390625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.35625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout-w936dp/onboarding_main_layout.xml" value="0.14453125" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout-w936dp/onboarding_pager_layout.xml" value="0.14453125" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout-w936dp/onboarding_text.xml" value="0.1328125" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout-w936dp/onboarding_text_content_layout.xml" value="0.1" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_contact.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_experiences.xml" value="0.25" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_file_viewer.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_fragments.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_my_data.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_others.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_personal_data.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_preferences.xml" value="0.29286239882266374" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_splash.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_start.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/activity_terms.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/content_scrolling.xml" value="0.34393638170974156" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/custom_toolbar.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_call_layout.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_download _complete_layout.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_downloadcomplete_layout.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_downloading_layout.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_exit_layout.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_github_layout.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_linkedin_layout.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_loading_layout.xml" value="0.5" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_website_layout.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/dialog_whatsapp_layout.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/fragment_blank.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/notification.xml" value="0.3463541666666667" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/onbarding_text_layout.xml" value="0.2015625" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/onboarding_main.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/onboarding_pager.xml" value="0.36041666666666666" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/layout/pdfv.xml" value="0.25833333333333336" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/menu/chat_menu.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/menu/main_menu.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/menu/menu_terms.xml" value="0.371875" />
+        <entry key="..\:/my pro/web apps/emmanuelcv/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3765625" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable-v24/gradient_card.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/circle.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/gradient_main.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/gradient_snack.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/gradient_snack_error.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_email.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_bg_topheader.xml" value="0.1398148148148148" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_contactme.xml" value="0.22604166666666667" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_course_plan.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_course_schedule.xml" value="0.14074074074074075" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_documents.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_exit.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_exit_1.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_experience.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_github.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_internet.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_linkedin.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_profile.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_settings.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/drawable/ic_settings_6.xml" value="0.3880208333333333" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/font/abril_fatface.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/font/amaranth.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/font/bungee_shade.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/font/coiny.xml" value="0.11388888888888889" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/font/fonts.xml" value="0.2390625" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/activity_contact.xml" value="0.5" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/activity_main.xml" value="0.42962962962962964" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/activity_splash.xml" value="0.18" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/custom_toolbar.xml" value="0.1" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/dialog_call_layout.xml" value="0.371875" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/dialog_email_layout.xml" value="0.2037037037037037" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/layout/dialog_loading_layout.xml" value="0.371875" />
+        <entry key="..\:/web apps/emmanuelcv/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.225" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

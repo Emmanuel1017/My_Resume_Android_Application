@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onboardingRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BG COLORS CONTAINER -->
+    <FrameLayout
+        android:id="@+id/onboardingBackgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+    <!-- MAIN LAYOUT SECTION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="55dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <!-- ICON CONTAINER -->
+
+            <FrameLayout
+                android:id="@+id/onboardingContentIconContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+
+                />
+
+            <!-- TEXT CONTAINER -->
+            <FrameLayout
+                android:id="@+id/onboardingContentTextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- PAGER ICONS CONTAINER -->
+    <LinearLayout
+        android:id="@+id/onboardingPagerIconsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="15dp"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Floating_Button_next"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        app:elevation="0dp"
+        app:pressedTranslationZ="0dp"
+        android:backgroundTint="@color/transparentWhite"
+        android:foreground="@drawable/ic_right_arrow" />
+
+
+</RelativeLayout>

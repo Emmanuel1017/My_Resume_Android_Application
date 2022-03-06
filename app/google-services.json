@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "676940554194",
+    "firebase_url": "https://emmanuelkorircv-default-rtdb.firebaseio.com",
+    "project_id": "emmanuelkorircv",
+    "storage_bucket": "emmanuelkorircv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676940554194:android:3356f9fe39c6ca97ffb20b",
+        "android_client_info": {
+          "package_name": "com.emmanuel.emmanuelkorircv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676940554194-kqbkt4v2ls6coohbdf2rl1p09vi67j8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emmanuel.emmanuelkorircv",
+            "certificate_hash": "bd33d9f0296402f7c1ac68ccd45346e5146999e7"
+          }
+        },
+        {
+          "client_id": "676940554194-lc4vf75rt3sa3mahuqmugse6u0c4r6fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu40dn55FEYNugvFSJjVejzj9lSLsPdBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676940554194-lc4vf75rt3sa3mahuqmugse6u0c4r6fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
