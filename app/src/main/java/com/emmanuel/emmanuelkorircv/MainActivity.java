@@ -125,33 +125,65 @@ public class MainActivity extends AppCompatActivity {
             Photo.setImageDrawable(res);
 
             Back.setImageDrawable(getDrawable(R.drawable.ic_baseline_arrow_back_white));
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.boy_dark)
+                    .into(MeImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.experiences_dark)
+                    .into(ExperiencesImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.mobile_dark)
+
+                    .into(Contactimg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.paint_dark)
+
+                    .into(OtherImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.setting_dark)
+
+                    .into(Preferencesimg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.back_dark)
+
+                    .into(Exitimg);
+
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.setting_dark)
+                    .into(Settings);
         }else{
             Drawable resn = getResources().getDrawable(R.drawable.caribou_logo);
             Photo.setImageDrawable(resn);
+
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.boy)
+                    .into(MeImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.experiences)
+                    .into(ExperiencesImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.mobile)
+
+                    .into(Contactimg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.paint)
+
+                    .into(OtherImg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.settings)
+
+                    .into(Preferencesimg);
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.back)
+
+                    .into(Exitimg);
+
+            Glide.with(MainActivity.this)
+                    .load(R.drawable.settings)
+                    .into(Settings);
         }
 
-        Glide.with(MainActivity.this)
-                 .load(R.drawable.boy)
-                 .into(MeImg);
-        Glide.with(MainActivity.this)
-                .load(R.drawable.experiences)
-                .into(ExperiencesImg);
-        Glide.with(MainActivity.this)
-                .load(R.drawable.mobile)
 
-                .into(Contactimg);
-        Glide.with(MainActivity.this)
-                .load(R.drawable.paint)
-
-                .into(OtherImg);
-        Glide.with(MainActivity.this)
-                .load(R.drawable.settings)
-
-                .into(Preferencesimg);
-        Glide.with(MainActivity.this)
-                .load(R.drawable.back)
-
-                .into(Exitimg);
 
 
         // Create the Handler object (on the main thread by default)

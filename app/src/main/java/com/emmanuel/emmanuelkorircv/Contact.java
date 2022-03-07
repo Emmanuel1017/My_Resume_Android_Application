@@ -103,10 +103,10 @@ public class Contact extends AppCompatActivity {
             WaveHeader.setCloseColor(getColor(R.color.colorTextDisabled));
             WaveHeader.setStartColor(getColor(R.color.black));
             linkedin.setImageDrawable(getDrawable(R.drawable.ic_linkedin_dark));
-            github.setImageDrawable(getDrawable(R.drawable.ic_linkedin_dark));
-            whtsapp.setImageDrawable(getDrawable(R.drawable.ic_linkedin_dark));
-            twitter.setImageDrawable(getDrawable(R.drawable.ic_linkedin_dark));
-            Call.setImageDrawable(getDrawable(R.drawable.ic_linkedin_dark));
+            github.setImageDrawable(getDrawable(R.drawable.ic_github_dark));
+            whtsapp.setImageDrawable(getDrawable(R.drawable.ic_whatsapp_dark));
+            twitter.setImageDrawable(getDrawable(R.drawable.ic_baseline_email_dark));
+            Call.setImageDrawable(getDrawable(R.drawable.ic_baseline_local_phone_dark));
             tv_star.setImageDrawable(getDrawable(R.drawable.ic_internet_dark));
             Backbg.setBackgroundColor(Color.parseColor("#4E4E4E"));
             Contactme2.setTextColor(getColor(R.color.white));
@@ -115,6 +115,8 @@ public class Contact extends AppCompatActivity {
             View1.setBackgroundColor(getColor(R.color.white));
             View2.setBackgroundColor(getColor(R.color.white));
             View3.setBackgroundColor(getColor(R.color.white));
+
+            Back.setImageDrawable(getDrawable(R.drawable.ic_baseline_arrow_back_white));
         }
 
 
