@@ -189,7 +189,7 @@
               app:pcv_orientation="clockwise"
               app:pcv_backgroundColor="@color/cardColor"
               app:pcv_progressColor="#071B8F"
-              app:pcv_backgroundBarColor="@color/transparent"
+              app:pcv_backgroundBarColor="#52BCBCBC"
               app:pcv_textColor="@color/blueDark"
               app:pcv_textStyle="bold"
               app:pcv_textSize="16dp"
@@ -199,6 +199,7 @@
               app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_View_cputop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -236,6 +237,7 @@
               app:pcv_startAngle="90"/>
 
            <TextView
+               android:id="@+id/Text_view_ram_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -708,14 +710,13 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-          android:elevation="3dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+          android:elevation="3dp">
+        <LinearLayout
+            android:id="@+id/linear_layout_storage_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
           android:orientation="vertical">
 
           <TextView
@@ -732,6 +733,8 @@
               android:id="@+id/progressViewRAM"
               android:layout_width="match_parent"
               android:layout_height="22dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
               app:progressView_colorBackground="#C6C6C6"
               app:progressView_colorProgress="@color/blueDark"
               app:progressView_progress="40"
@@ -760,6 +763,8 @@
               android:id="@+id/progressViewInternalStorage"
               android:layout_width="match_parent"
               android:layout_height="22dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
               app:progressView_colorBackground="#C6C6C6"
               app:progressView_colorProgress="@color/blueDark"
               app:progressView_progress="40"
@@ -788,6 +793,8 @@
               android:id="@+id/progressViewExternalStorage"
               android:layout_width="match_parent"
               android:layout_height="22dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
               app:progressView_colorBackground="#C6C6C6"
               app:progressView_colorProgress="@color/blueDark"
               app:progressView_progress="40"

@@ -112,8 +112,8 @@ public class Preferences extends AppCompatActivity {
     private PercentageChartView FloatViewRAM,FloatCPU,FloatStarage,FloatCPUFrq0,FloatCPUFrq1,FloatCPUFrq2,FloatCPUFrq3,FloatCPUFrq4,FloatCPUFrq5,FloatCPUFrq6,FloatCPUFrq7;
     private Thread threadStats,ThredStatsCpu;
     private  TextView TempCpu0,TempCpu1,TempCpu2,TempCpu3,TempCpu4,TempCpu5,TempCpu6,TempCpu7;
-    private LinearLayout CPURow2;
-    private   Handler handler1,handlerStats;
+    private LinearLayout CPURow2,LinearLayoutstorage;
+    private Handler handler1,handlerStats;
     private Runnable runnableCode1,runnableCodeStats;
     private ProgressView InternalStorage,ExternalStorage,RAMProgressview;
     private TextView InternalStorageText,ExternalStorageText,RAMText;
@@ -214,6 +214,7 @@ public class Preferences extends AppCompatActivity {
         ExternalStorageText=findViewById(R.id.External_storage_Text);
         RAMText=findViewById(R.id.RAM_Text);
 
+        LinearLayoutstorage=findViewById(R.id.linear_layout_storage_info);
 
 
         animblink = AnimationUtils.loadAnimation(getApplicationContext(),
@@ -227,8 +228,6 @@ public class Preferences extends AppCompatActivity {
 
         // If the night mode is correct by default, it sets the Night Mode theme.
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
-
-
             setTheme(R.style.NoActionBar);
             LinearLayout layout =(LinearLayout) findViewById(R.id.layout_info_card);
             layout.setBackgroundResource(R.drawable.gradient_card_dark);
@@ -265,19 +264,24 @@ public class Preferences extends AppCompatActivity {
             ScanQR1.setTextColor(Color.parseColor("#FFFFFF"));
             ScanQr2.setTextColor(Color.parseColor("#FFFFFF"));
             ScanQR3.setTextColor(Color.parseColor("#FFFFFF"));
-            Text1.setTextColor(Color.parseColor("#FFFFFF"));
+            //Text1.setTextColor(Color.parseColor("#FFFFFF"));
             View2.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View3.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View4.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View5.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View6.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View7.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            LinearLayoutstorage.setBackgroundColor(Color.parseColor("#3A3B3C"));
            // View8.setBackgroundColor(Color.parseColor("#FFFFFF"));
            // View9.setBackgroundColor(Color.parseColor("#FFFFFF"));
            // View10.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            FloatViewRAM.setBackgroundColor(R.color.white);
+            FloatCPU.setBackgroundColor(R.color.white);
+            FloatStarage.setBackgroundColor(R.color.white);
+
+            FloatViewRAM.setTextColor(Color.parseColor("#FFFFFF"));
 
         }else{
-
             setTheme(R.style.AppTheme);
         }
         //night mode end
@@ -301,15 +305,23 @@ public class Preferences extends AppCompatActivity {
                 switch (current) {
                     case LEFT:
                         //showing simple toast message to the user
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        handler1.removeCallbacks(runnableCode1);
+                        handlerStats.removeCallbacks(runnableCodeStats);
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        handler1.post(runnableCode1);
+                        handlerStats.post(runnableCodeStats);
                         Toast.makeText(Preferences.this, "Light Mode", Toast.LENGTH_SHORT).show();
                         break;
 
                     case RIGHT:
                         //showing simple toast message to the user
+                        handler1.removeCallbacks(runnableCode1);
+                        handlerStats.removeCallbacks(runnableCodeStats);
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                         iconSwitch.setBackgroundColor(getColor(R.color.black));
                         Toast.makeText(Preferences.this, "Dark Mode", Toast.LENGTH_SHORT).show();
+                        handler1.post(runnableCode1);
+                        handlerStats.post(runnableCodeStats);
                         break;
                 }
             }
@@ -419,8 +431,6 @@ public class Preferences extends AppCompatActivity {
         WebLInk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 WebLInk.startAnimation(animblink_link);
                 //animation lottie
                 final Dialog sDialog =new Dialog(Preferences.this);
@@ -1053,8 +1063,6 @@ public class Preferences extends AppCompatActivity {
             if (isConnected) {
                 internetStatus.setText("Connected.");
                 internetStatus.setTextColor(getColor(R.color.colorWhite));
-                Conn.setVisibility(View.GONE);
-                Disconn.setVisibility(View.GONE);
                 Con.setVisibility(View.VISIBLE);
                 Con.setImageDrawable(getDrawable(R.color.white));
                 Con.startAnimation(animblink);
@@ -1063,8 +1071,6 @@ public class Preferences extends AppCompatActivity {
             } else {
                 internetStatus.setText("Disconnected.");
                 internetStatus.setTextColor(getColor(R.color.message_bubble_grey));
-                Conn.setVisibility(View.GONE);
-                Disconn.setVisibility(View.GONE);
                 Con.setVisibility(View.GONE);
                 Discon.setVisibility(View.VISIBLE);
             }
