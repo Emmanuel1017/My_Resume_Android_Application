@@ -82,29 +82,6 @@
 
   </LinearLayout>
 
-  <ImageView
-      android:id="@+id/connected_image"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
-      android:layout_marginEnd="4dp"
-      android:elevation="10dp"
-      android:visibility="gone"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/ic_wifi_connected" />
-
-  <ImageView
-      android:id="@+id/disconnected_image"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
-      android:layout_marginEnd="4dp"
-      android:elevation="10dp"
-      android:visibility="gone"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/ic_wifi_disconnected" />
 
   <ScrollView
       android:layout_width="match_parent"
@@ -114,9 +91,14 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical">
+
+
+
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -127,7 +109,6 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/iconSwitch">
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -145,42 +126,34 @@
               android:id="@+id/layout_info_card"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:layout_gravity="center_horizontal|center_vertical"
               android:layout_margin="0dp"
               android:background="@drawable/gradient_card"
               android:gravity="center"
               android:orientation="vertical">
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:text="Device Info"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="17dp"
-                android:text="Below are some information about your Device:" />
+                android:textSize="17dp" />
 
-
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DEVICE INFO : "
-                android:textColor="@color/white"
-                android:textSize="15dp"
-                android:textStyle="bold" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
-              android:orientation="horizontal">
-
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
               <TextView
                   android:id="@+id/quantity_text"
-                  android:layout_width="wrap_content"
+                  android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textColor="@color/white"
                   android:textSize="15dp"
@@ -191,6 +164,773 @@
 
           </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical">
+
+          <com.ramijemli.percentagechartview.PercentageChartView
+              android:id="@+id/view_cpu_float"
+              android:layout_width="90dp"
+              android:layout_height="90dp"
+              app:pcv_mode="ring"
+              app:pcv_orientation="clockwise"
+              app:pcv_backgroundColor="@color/cardColor"
+              app:pcv_progressColor="#071B8F"
+              app:pcv_backgroundBarColor="@color/transparent"
+              app:pcv_textColor="@color/blueDark"
+              app:pcv_textStyle="bold"
+              app:pcv_textSize="16dp"
+              app:pcv_animDuration="800"
+              app:pcv_animInterpolator="anticipate_overshoot"
+              app:pcv_progress="10"
+              app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:text="CPU"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="40dp"
+              android:orientation="vertical">
+
+          <com.ramijemli.percentagechartview.PercentageChartView
+              android:id="@+id/view_ram_float"
+              android:layout_width="90dp"
+              android:layout_height="90dp"
+              app:pcv_mode="ring"
+              app:pcv_orientation="clockwise"
+              app:pcv_backgroundColor="@color/cardColor"
+              app:pcv_progressColor="#071B8F"
+              app:pcv_backgroundBarColor="@color/transparent"
+              app:pcv_textColor="@color/blueDark"
+              app:pcv_textStyle="bold"
+              app:pcv_textSize="16dp"
+              app:pcv_animDuration="800"
+              app:pcv_animInterpolator="anticipate_overshoot"
+              app:pcv_progress="10"
+              app:pcv_startAngle="90"/>
+
+           <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:text="RAM"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+          <com.ramijemli.percentagechartview.PercentageChartView
+              android:id="@+id/view_storage_float"
+              android:layout_width="90dp"
+              android:layout_height="90dp"
+              app:pcv_mode="ring"
+              app:pcv_orientation="clockwise"
+              app:pcv_backgroundColor="@color/cardColor"
+              app:pcv_progressColor="#071B8F"
+              app:pcv_backgroundBarColor="@color/transparent"
+              app:pcv_textColor="@color/blueDark"
+              app:pcv_textStyle="bold"
+              app:pcv_textSize="16dp"
+              app:pcv_animDuration="800"
+              app:pcv_animInterpolator="anticipate_overshoot"
+              app:pcv_progress="10"
+              app:pcv_startAngle="90"/>
+
+          <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:text="Storage"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq0"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+
+                android:textStyle="bold"
+                android:text="CPU 0"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/cpu_0_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 1"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_1_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 2"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_2_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 4"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_3_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/Linear_Layout_cpu_Row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 4"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_4_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 5"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_5_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="26dp"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 6"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/cpu_6_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <com.ramijemli.percentagechartview.PercentageChartView
+                android:id="@+id/view_cpu_float_freq7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:pcv_mode="ring"
+                app:pcv_orientation="clockwise"
+                app:pcv_backgroundColor="@color/cardColor"
+                app:pcv_progressColor="#071B8F"
+                app:pcv_backgroundBarColor="@color/transparent"
+                app:pcv_textColor="@color/blueDark"
+                app:pcv_textStyle="bold"
+                app:pcv_textSize="16dp"
+                app:pcv_animDuration="800"
+                app:pcv_animInterpolator="anticipate_overshoot"
+                app:pcv_progress="10"
+                app:pcv_startAngle="90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="CPU 7"
+                android:textAlignment="center"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/cpu_7_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+          android:elevation="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="17dp"
+              android:layout_marginBottom="10dp"
+              android:textStyle="bold"
+              android:textColor="@color/blueDark"
+              android:text="Storage info"
+              android:layout_gravity="center_horizontal"/>
+
+          <com.emmanuel.emmanuelkorircv.ProgressView
+              android:id="@+id/progressViewRAM"
+              android:layout_width="match_parent"
+              android:layout_height="22dp"
+              app:progressView_colorBackground="#C6C6C6"
+              app:progressView_colorProgress="@color/blueDark"
+              app:progressView_progress="40"
+              app:progressView_min="1"
+              app:progressView_max="100"
+              app:progressView_progressFromPrevious="true"
+              app:progressView_autoAnimate="true"
+              app:progressView_radius="12dp"
+              app:progressView_padding="1dp"
+              app:progressView_labelColorInner="@color/white"
+              app:progressView_labelColorOuter="@color/black"
+              app:progressView_labelSize="13sp"
+              app:progressView_labelSpace="10dp"
+              app:progressView_labelText="RAM"
+              app:progressView_labelTypeface="bold" />
+          <TextView
+              android:id="@+id/RAM_Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:textSize="14dp"
+              android:layout_marginBottom="20dp"
+              android:textColor="@color/blueDark"/>
+
+          <com.emmanuel.emmanuelkorircv.ProgressView
+              android:id="@+id/progressViewInternalStorage"
+              android:layout_width="match_parent"
+              android:layout_height="22dp"
+              app:progressView_colorBackground="#C6C6C6"
+              app:progressView_colorProgress="@color/blueDark"
+              app:progressView_progress="40"
+              app:progressView_min="1"
+              app:progressView_max="100"
+              app:progressView_progressFromPrevious="true"
+              app:progressView_autoAnimate="true"
+              app:progressView_radius="12dp"
+              app:progressView_padding="1dp"
+              app:progressView_labelColorInner="@color/white"
+              app:progressView_labelColorOuter="@color/black"
+              app:progressView_labelSize="13sp"
+              app:progressView_labelSpace="10dp"
+              app:progressView_labelText="Storage"
+              app:progressView_labelTypeface="bold" />
+          <TextView
+              android:id="@+id/internal_storage_Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:textSize="14dp"
+              android:layout_marginBottom="20dp"
+              android:textColor="@color/blueDark"/>
+
+          <com.emmanuel.emmanuelkorircv.ProgressView
+              android:id="@+id/progressViewExternalStorage"
+              android:layout_width="match_parent"
+              android:layout_height="22dp"
+              app:progressView_colorBackground="#C6C6C6"
+              app:progressView_colorProgress="@color/blueDark"
+              app:progressView_progress="40"
+              app:progressView_min="1"
+              app:progressView_max="100"
+              app:progressView_progressFromPrevious="true"
+              app:progressView_autoAnimate="true"
+              app:progressView_radius="12dp"
+              app:progressView_padding="1dp"
+              app:progressView_labelColorInner="@color/white"
+              app:progressView_labelColorOuter="@color/black"
+              app:progressView_labelSize="13sp"
+              app:progressView_labelSpace="10dp"
+              app:progressView_labelText="External Storage"
+              app:progressView_labelTypeface="bold" />
+          <TextView
+              android:id="@+id/External_storage_Text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:textSize="14dp"
+              android:textColor="@color/blueDark"/>
+
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/Day_Night_Linear_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/DayNight_card"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_rowWeight="1"
+              android:layout_columnWeight="1"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginBottom="7dp"
+              android:layout_marginTop="7dp"
+              android:background="@color/cardColor"
+              android:clickable="true"
+              android:focusable="true"
+              android:foreground="?android:attr/selectableItemBackground"
+              app:cardCornerRadius="8dp"
+              app:cardElevation="6dp">
+
+            <LinearLayout
+                android:id="@+id/layout_Day_Night_Card"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:background="@drawable/gradient_card"
+                android:gravity="center"
+                android:orientation="vertical">
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="10dp"
+                  android:src="@drawable/dark_mode"/>
+
+            </LinearLayout>
+          </androidx.cardview.widget.CardView>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/Night_Day_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Day/Night Mode"
+                android:textColor="@color/blueDark"
+                android:textSize="17dp"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/Night_Day_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif"
+                android:text="Set Night And Day Mode "
+                android:textSize="17dp" />
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/iconSwitch"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:layout_gravity="right"
+              android:foregroundGravity="right"
+              android:gravity="center_vertical"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.polyak.iconswitch.IconSwitch
+                android:id="@+id/iconSwitchDarkLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:isw_active_tint_icon_left="#FFFFFF"
+                app:isw_active_tint_icon_right="#FFFFFF"
+                app:isw_background_color="#2196F3"
+                app:isw_default_selection="left"
+                app:isw_icon_left="@drawable/light_mode"
+                app:isw_icon_right="@drawable/dark_mode"
+                app:isw_icon_size="10dp"
+                app:isw_inactive_tint_icon_left="#FFEB3B"
+                app:isw_inactive_tint_icon_right="#100A0A"
+                app:isw_thumb_color_left="#FFC107"
+                app:isw_thumb_color_right="#0C0101"
+                />
+
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+
 
 
         <LinearLayout
@@ -270,12 +1010,6 @@
 
 
           </LinearLayout>
-
-
-
-
-
-
 
         </LinearLayout>
 
@@ -695,18 +1429,6 @@
               android:layout_margin="5dp">
 
 
-            <View
-                android:id="@+id/view8"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:foregroundGravity="center|center_horizontal"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="440dp" />
 
 
 
@@ -813,18 +1535,7 @@
               android:layout_margin="5dp">
 
 
-            <View
-                android:id="@+id/view9"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:foregroundGravity="center|center_horizontal"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="440dp" />
+
 
 
 
@@ -928,23 +1639,6 @@
               android:layout_margin="5dp">
 
 
-            <View
-                android:id="@+id/view10"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:foregroundGravity="center|center_horizontal"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="440dp" />
-
-
-
-
-
           </LinearLayout>
 
         </LinearLayout>
@@ -952,47 +1646,9 @@
 
       </LinearLayout>
 
-      <LinearLayout
-          android:id="@+id/iconSwitch"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-        android:orientation="vertical"
-          android:layout_marginTop="40dp"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-        >
 
 
-      <com.polyak.iconswitch.IconSwitch
-          android:id="@+id/iconSwitchDarkLight"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          app:isw_active_tint_icon_left="#FFFFFF"
-          app:isw_active_tint_icon_right="#FFFFFF"
-          app:isw_background_color="#2196F3"
-          app:isw_default_selection="left"
-          app:isw_icon_left="@drawable/light_mode"
-          app:isw_icon_right="@drawable/dark_mode"
-          app:isw_icon_size="20dp"
-          app:isw_inactive_tint_icon_left="#FFEB3B"
-          app:isw_inactive_tint_icon_right="#100A0A"
-          app:isw_thumb_color_left="#FFC107"
-          app:isw_thumb_color_right="#0C0101"
-        />
-        <TextView
-            android:id="@+id/text_prerences_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Light/Dark Mode"
-            android:fontFamily="@font/irsans"
-            android:textColor="@color/blueDark"
-            />
-
-      </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
   </ScrollView>
 

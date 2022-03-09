@@ -1,5 +1,17 @@
 package com.emmanuel.emmanuelkorircv;
 
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.calcCpuCoreCount;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.externalMemoryAvailable;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.formatSize;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.formatSizeRAM;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.getAvailableExternalMemorySize;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.getAvailableInternalMemorySize;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.getTotalExternalMemorySize;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.getTotalInternalMemorySize;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.takeCurrentCpuFreq;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.takeMaxCpuFreq;
+import static com.emmanuel.emmanuelkorircv.Utility.DeviceInfo.thermalTemp;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
@@ -59,6 +71,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.zxing.WriterException;
 import com.pddstudio.urlshortener.URLShortener;
 import com.polyak.iconswitch.IconSwitch;
+import com.ramijemli.percentagechartview.PercentageChartView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -96,6 +109,17 @@ public class Preferences extends AppCompatActivity {
     private String AppqrString,ApplinkStr;
     private SharedPreferences sharedPreferences;
     private Map<String ,Object> userData;
+    private PercentageChartView FloatViewRAM,FloatCPU,FloatStarage,FloatCPUFrq0,FloatCPUFrq1,FloatCPUFrq2,FloatCPUFrq3,FloatCPUFrq4,FloatCPUFrq5,FloatCPUFrq6,FloatCPUFrq7;
+    private Thread threadStats,ThredStatsCpu;
+    private  TextView TempCpu0,TempCpu1,TempCpu2,TempCpu3,TempCpu4,TempCpu5,TempCpu6,TempCpu7;
+    private LinearLayout CPURow2;
+    private   Handler handler1,handlerStats;
+    private Runnable runnableCode1,runnableCodeStats;
+    private ProgressView InternalStorage,ExternalStorage,RAMProgressview;
+    private TextView InternalStorageText,ExternalStorageText,RAMText;
+
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint({"SetTextI18n", "ResourceAsColor"})
@@ -116,8 +140,6 @@ public class Preferences extends AppCompatActivity {
 
 
 
-        Conn= findViewById(R.id.connected_image);
-        Disconn=findViewById(R.id.disconnected_image);
         Con= findViewById(R.id.online_dot);
         Discon=findViewById(R.id.offline_dot);
         Back=findViewById(R.id.back_button_preferences);
@@ -143,16 +165,12 @@ public class Preferences extends AppCompatActivity {
         sharetext2=findViewById(R.id.share_text2);
         sharetext3=findViewById(R.id.share_text3);
         sharetext4=findViewById(R.id.share_text4);
-        Text1=findViewById(R.id.text_prerences_1);
         View2=findViewById(R.id.view2);
         View3=findViewById(R.id.view3);
         View4=findViewById(R.id.view4);
         View5=findViewById(R.id.view5);
         View6=findViewById(R.id.view6);
         View7=findViewById(R.id.view7);
-        View8=findViewById(R.id.view8);
-        View9=findViewById(R.id.view9);
-        View10=findViewById(R.id.view10);
         View2=findViewById(R.id.view2);
         WebQR=findViewById(R.id.website_qr_code);
         ResumeQr=findViewById(R.id.resume_qr_code);
@@ -166,6 +184,35 @@ public class Preferences extends AppCompatActivity {
 
         userData=new HashMap<>();
 
+        FloatViewRAM=findViewById(R.id.view_ram_float);
+        FloatCPU=findViewById(R.id.view_cpu_float);
+        FloatStarage=findViewById(R.id.view_storage_float);
+        FloatCPUFrq0=findViewById(R.id.view_cpu_float_freq0);
+        FloatCPUFrq1=findViewById(R.id.view_cpu_float_freq1);
+        FloatCPUFrq2=findViewById(R.id.view_cpu_float_freq2);FloatCPUFrq0=findViewById(R.id.view_cpu_float_freq0);
+        FloatCPUFrq3=findViewById(R.id.view_cpu_float_freq3);
+        FloatCPUFrq4=findViewById(R.id.view_cpu_float_freq4);
+        FloatCPUFrq5=findViewById(R.id.view_cpu_float_freq5);
+        FloatCPUFrq6=findViewById(R.id.view_cpu_float_freq6);
+        FloatCPUFrq7=findViewById(R.id.view_cpu_float_freq7);
+
+        TempCpu0=findViewById(R.id.cpu_0_temp);
+        TempCpu1=findViewById(R.id.cpu_1_temp);
+        TempCpu2=findViewById(R.id.cpu_2_temp);
+        TempCpu3=findViewById(R.id.cpu_3_temp);
+        TempCpu4=findViewById(R.id.cpu_4_temp);
+        TempCpu5=findViewById(R.id.cpu_5_temp);
+        TempCpu6=findViewById(R.id.cpu_6_temp);
+        TempCpu7=findViewById(R.id.cpu_7_temp);
+
+        CPURow2=findViewById(R.id.Linear_Layout_cpu_Row_2);
+
+        InternalStorage=findViewById(R.id.progressViewInternalStorage);
+        ExternalStorage=findViewById(R.id.progressViewExternalStorage);
+        RAMProgressview=findViewById(R.id.progressViewRAM);
+        InternalStorageText=findViewById(R.id.internal_storage_Text);
+        ExternalStorageText=findViewById(R.id.External_storage_Text);
+        RAMText=findViewById(R.id.RAM_Text);
 
 
 
@@ -181,6 +228,7 @@ public class Preferences extends AppCompatActivity {
         // If the night mode is correct by default, it sets the Night Mode theme.
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
 
+
             setTheme(R.style.NoActionBar);
             LinearLayout layout =(LinearLayout) findViewById(R.id.layout_info_card);
             layout.setBackgroundResource(R.drawable.gradient_card_dark);
@@ -192,7 +240,6 @@ public class Preferences extends AppCompatActivity {
             layout3.setBackgroundResource(R.drawable.gradient_card_dark);
             Drawable res = getResources().getDrawable(R.drawable.ic_baseline_arrow_back_white);
             Back.setImageDrawable(res);
-
             LinearLayout layout4 =(LinearLayout) findViewById(R.id.layout_info_card4);
             layout4.setBackgroundResource(R.drawable.gradient_card_dark);
             LinearLayout layout5 =(LinearLayout) findViewById(R.id.layout_info_card5);
@@ -225,14 +272,12 @@ public class Preferences extends AppCompatActivity {
             View5.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View6.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            View8.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            View9.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            View10.setBackgroundColor(Color.parseColor("#FFFFFF"));
-
-
-
+           // View8.setBackgroundColor(Color.parseColor("#FFFFFF"));
+           // View9.setBackgroundColor(Color.parseColor("#FFFFFF"));
+           // View10.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
         }else{
+
             setTheme(R.style.AppTheme);
         }
         //night mode end
@@ -241,7 +286,8 @@ public class Preferences extends AppCompatActivity {
 
 
         //If NightMode is active, the Switch is on right side. Enabled to be active
-        if(AppCompatDelegate.getDefaultNightMode() ==AppCompatDelegate.MODE_NIGHT_YES){
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
+        {
             iconSwitch.setChecked(IconSwitch.Checked.RIGHT);
             iconSwitch.setBackgroundColor(getColor(R.color.black));
         }
@@ -253,7 +299,6 @@ public class Preferences extends AppCompatActivity {
             public void onCheckChanged(IconSwitch.Checked current) {
                 //simple witch case
                 switch (current) {
-
                     case LEFT:
                         //showing simple toast message to the user
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -290,7 +335,7 @@ public class Preferences extends AppCompatActivity {
                 Log.d("Handlers", "Called on main thread");
                 // Repeat this the same runnable code block again another 0.1 seconds
                 // 'this' is referencing the Runnable object
-                handler.postDelayed(this, 100);
+                handler.postDelayed(this, 500);
             }
         };
 // Start the initial runnable task by posting through the handler
@@ -459,13 +504,17 @@ public class Preferences extends AppCompatActivity {
         });
 
 
+
+
+
+
         String arch = System.getProperty("os.arch");
 //        Log.v("Scan Class", getDeviceName());
 //        Toast.makeText(this, getDeviceName(), Toast.LENGTH_SHORT).show();
         TextView tv = (TextView) findViewById(R.id.quantity_text);
 
         try {
-        tv.setText("***** DEVICE Information *****" + "\n");
+        tv.setText("******DEVICE Information ******" + "\n");
         tv.append("Model: " + Build.MODEL + "\n");
         tv.append("Brand: " + Build.BRAND + "\n");
         tv.append("Manufacturer: " + Build.MANUFACTURER + "\n");
@@ -479,44 +528,155 @@ public class Preferences extends AppCompatActivity {
         tv.append("Architecture: " + arch +  "\n");
 
 
-
-
+            //cpus frequency
+            int CpuCurrentFreq;
+            if(calcCpuCoreCount()>4)
+            {
+                //show row 2 in octacore
+                CPURow2.setVisibility(View.VISIBLE);
+            }
 
             // Create the Handler object (on the main thread by default)
-            Handler handler1 = new Handler();
+            handlerStats = new Handler();
 // Define the code block to be executed
-            Runnable runnableCode1 = new Runnable() {
+            runnableCodeStats = new Runnable() {
                 @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void run() {
 
+                    ActivityManager actManager = (ActivityManager) Preferences.this.getSystemService(Context.ACTIVITY_SERVICE);
+                    ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
+                    assert actManager != null;
+                    actManager.getMemoryInfo(memInfo);
+
+                    float totalMemory = memInfo.totalMem;
+                    float availMemory = memInfo.availMem;
+                    float usedMemory = totalMemory - availMemory;
+                    float perecentlong = (float) ((usedMemory / totalMemory)*100);
+
+                    FloatViewRAM.setProgress(perecentlong,true);
+                    RAMProgressview.setProgress(perecentlong);
+
+                    RAMText.setText("Total: "+ formatSizeRAM(memInfo.totalMem) +"  Used: "+formatSizeRAM(memInfo.totalMem-memInfo.availMem)+"  Free: "+formatSizeRAM(memInfo.availMem));
+
+                 //Toast.makeText(Preferences.this, calThermalsCount()+"",Toast.LENGTH_SHORT).show();
+
+                    float usedinternalstorage = (float)(getTotalInternalMemorySize()-getAvailableInternalMemorySize());
+                    float Storageinternal = (float)(usedinternalstorage/getTotalInternalMemorySize()*100);
+
+                    //Toast.makeText(Preferences.this, getTotalInternalMemorySize()+"",Toast.LENGTH_SHORT).show();
+
+                    InternalStorage.setAnimating(true);
+                    InternalStorage.setProgress(Storageinternal);
+                    InternalStorage.setLabelText("Internal Storage");
+
+                    InternalStorageText.setText("Size: "+formatSize(getTotalInternalMemorySize())+"  used: "+formatSize(getTotalInternalMemorySize()-getAvailableInternalMemorySize())+"   Free: "+formatSize(getAvailableInternalMemorySize()));
+
+                    if(externalMemoryAvailable())
+                    {
+                        float usedexternalstorage = (float)(getTotalExternalMemorySize()-getAvailableExternalMemorySize());
+                        float Storageexternal = (float)(usedexternalstorage/getTotalExternalMemorySize()*100);
+                        ExternalStorage.setAnimating(true);
+                        ExternalStorage.setProgress(Storageexternal);
+                        ExternalStorageText.setText("Size: "+formatSize(getTotalExternalMemorySize())+"  used: "+formatSize(getTotalExternalMemorySize()-getAvailableExternalMemorySize())+"   Free: "+formatSize(getAvailableExternalMemorySize()));
+
+                    }else
+                    {
+                        ExternalStorageText.setVisibility(View.GONE);
+                        ExternalStorage.setVisibility(View.GONE);
+                    }
+
+                    FloatStarage.setProgress(Storageinternal,true);
+
+                    for (int i = 0; i <50; i++) {
+                         switch (i)
+                        {
+                            case 17:
+                                TempCpu0.setText(""+ thermalTemp(i));
+                            break;
+                            case 18:
+                                TempCpu1.setText(""+ thermalTemp(i));
+                                break;
+                            case 19:
+                                TempCpu2.setText(""+ thermalTemp(i));
+                                break;
+                            case 20:
+                                TempCpu3.setText(""+ thermalTemp(i));
+                                break;
+                            case 21:
+                                TempCpu4.setText(""+ thermalTemp(i));
+                                break;
+                            case 22:
+                                TempCpu5.setText(""+ thermalTemp(i));
+                                break;
+                            case 23:
+                                TempCpu6.setText(""+ thermalTemp(i));
+                                break;
+                            case 24:
+                                TempCpu7.setText(""+ thermalTemp(i));
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    handlerStats.postDelayed(this, 800);
+                }
+            };
 
 
+            // Create the Handler object (on the main thread by default)
+            handler1 = new Handler();
+// Define the code block to be executed
+            runnableCode1 = new Runnable() {
+                @RequiresApi(api = Build.VERSION_CODES.M)
+                @Override
+                public void run() {
+                   // -----------------------------------//cpus frequency--------------------------------
+                    float percent =(float)(takeCurrentCpuFreq(0) / takeMaxCpuFreq(0) * 100);
+                    FloatCPU.setProgress(percent, true);
+                   // Toast.makeText(Preferences.this,takeCurrentCpuFreq(0)+" ",Toast.LENGTH_SHORT).show();
+                    for (int i = 0; i <calcCpuCoreCount(); i++) {
+                            float cpuload = (float)(takeCurrentCpuFreq(i)/takeMaxCpuFreq(i)*100);
+                        switch (i)
+                        {
+                            case 0:
+                                FloatCPUFrq0.setProgress(cpuload,true);
+                            break;
+                            case 1:
+                                FloatCPUFrq1.setProgress(cpuload,true);
+                                break;
+                            case 2:
+                                FloatCPUFrq2.setProgress(cpuload,true);
+                                break;
+                            case 3:
+                                FloatCPUFrq3.setProgress(cpuload,true);
+                                break;
+                            case 4:
+                                FloatCPUFrq4.setProgress(cpuload,true);
+                                break;
+                            case 5:
+                                FloatCPUFrq5.setProgress(cpuload,true);
+                                break;
+                            case 6:
+                                FloatCPUFrq6.setProgress(cpuload,true);
+                                break;
+                            case 7:
+                                FloatCPUFrq7.setProgress(cpuload,true);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    //Toast.makeText(Preferences.this, String.valueOf(perecentlong),Toast.LENGTH_SHORT).show();
                     handler1.postDelayed(this, 100);
                 }
-
             };
+
+                handler.post(runnableCode1);
+                handlerStats.post(runnableCodeStats);
+
+
 // Start the initial runnable task by posting through the handler
-            handler1.post(runnableCode1);
-
-
-            ActivityManager actManager = (ActivityManager) Preferences.this.getSystemService(Context.ACTIVITY_SERVICE);
-            ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
-            assert actManager != null;
-            actManager.getMemoryInfo(memInfo);
-            long totalMemory = memInfo.totalMem;
-            long availMemory = memInfo.availMem;
-            long usedMemory = totalMemory - availMemory;
-            float perecentlong = (((float) (availMemory / totalMemory))* 100);
-
-
-            tv.append("\n" + "***** Memory Info *****" + "\n");
-            tv.append("\n" + "Total RAM : "+ ""+(bytesToHuman(totalMemory))+ "\n");
-            tv.append("\n" + "Used RAM : "+ ""+(bytesToHuman(usedMemory))+ "\n");
-            tv.append("\n" + "Available RAM : "+ ""+(bytesToHuman(availMemory))+ "\n");
-
-
-
 
         tv.append("\n" + "***** OS Information *****" + "\n");
         tv.append("Build release: " + Build.VERSION.RELEASE + "\n");
@@ -539,37 +699,16 @@ public class Preferences extends AppCompatActivity {
         tv.append("Bootloader: " + Build.BOOTLOADER + "\n");
         tv.append("Kernel version: " + System.getProperty("os.version") + "\n");
 
-
-
-
         //tv.append(pInfo.installLocation);
         //tv.append(getVMVersion());
-
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
         QrcodeAppend();
 
-
-
-
-
-
-
-
-
-
     }
-
-
     //dark mode
-
-
 
 
     private void QrcodeAppend()
@@ -675,24 +814,7 @@ public class Preferences extends AppCompatActivity {
         return String.format(java.util.Locale.US, "%.2f", d);
     }
 
-    private String bytesToHuman(long size) {
-        long Kb = 1024;
-        long Mb = Kb * 1024;
-        long Gb = Mb * 1024;
-        long Tb = Gb * 1024;
-        long Pb = Tb * 1024;
-        long Eb = Pb * 1024;
 
-        if (size < Kb) return floatForm(size) + " byte";
-        if (size >= Kb && size < Mb) return floatForm((double) size / Kb) + " KB";
-        if (size >= Mb && size < Gb) return floatForm((double) size / Mb) + " MB";
-        if (size >= Gb && size < Tb) return floatForm((double) size / Gb) + " GB";
-        if (size >= Tb && size < Pb) return floatForm((double) size / Tb) + " TB";
-        if (size >= Pb && size < Eb) return floatForm((double) size / Pb) + " Pb";
-        if (size >= Eb) return floatForm((double) size / Eb) + " Eb";
-
-        return "0";
-    }
 
 
 
@@ -952,8 +1074,6 @@ public class Preferences extends AppCompatActivity {
             if (isConnected) {
                 internetStatus.setText("Connected.");
                 internetStatus.setTextColor(getColor(R.color.colorPrimaryDark));
-                Conn.setVisibility(View.GONE);
-                Disconn.setVisibility(View.GONE);
                 Con.setVisibility(View.VISIBLE);
                 Con.startAnimation(animblink);
                 Discon.setVisibility(View.GONE);
@@ -961,8 +1081,6 @@ public class Preferences extends AppCompatActivity {
             } else {
                 internetStatus.setText("Disconnected.");
                 internetStatus.setTextColor(getColor(R.color.colorTextPlaceholder));
-                Conn.setVisibility(View.GONE);
-                Disconn.setVisibility(View.GONE);
                 Con.setVisibility(View.GONE);
                 Discon.setVisibility(View.VISIBLE);
             }
@@ -972,13 +1090,23 @@ public class Preferences extends AppCompatActivity {
     }
     @Override
     protected void onPause() {
-
         super.onPause();
         MyApplication.activityPaused();// On Pause notify the Application
-
+        handler1.removeCallbacks(runnableCode1);
+        handlerStats.removeCallbacks(runnableCodeStats);
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MyApplication.activityPaused();// On Pause notify the Application
+
+        handler1.removeCallbacks(runnableCode1);
+        handlerStats.removeCallbacks(runnableCodeStats);
+
+
+    }
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -987,6 +1115,7 @@ public class Preferences extends AppCompatActivity {
 
         super.onResume();
         MyApplication.activityResumed();// On Resume notify the Application
+
 
         internetStatus = (TextView) findViewById(R.id.internet_status);
         // At activity startup we manually check the internet status and change

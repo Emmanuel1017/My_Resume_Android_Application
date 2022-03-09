@@ -35,7 +35,7 @@ private LottieAnimationView Lottie;
 
         Others_back=findViewById(R.id.back_button_others);
         BgOthers=findViewById(R.id.background_others);
-        Lottie=findViewById(R.id.animationViewOthers);
+        Lottie=findViewById(R.id.animationViewothers);
 
 
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
@@ -47,12 +47,9 @@ private LottieAnimationView Lottie;
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 Lottie.setAnimation(R.raw.construction);
                 Lottie.playAnimation();
                 Lottie.setRepeatCount(LottieDrawable.INFINITE);// for Infinite loops
-
-
             }
         }, 2500);
 

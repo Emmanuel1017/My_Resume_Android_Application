@@ -1,0 +1,209 @@
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/HighlightView : android/widget/FrameLayout {
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;)V
+	public synthetic fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getColor ()I
+	public final fun getColorGradientCenter ()I
+	public final fun getColorGradientEnd ()I
+	public final fun getColorGradientStart ()I
+	public final fun getHighlight ()Landroid/graphics/drawable/Drawable;
+	public final fun getHighlightAlpha ()F
+	public final fun getHighlightColor ()I
+	public final fun getHighlightThickness ()I
+	public final fun getHighlighting ()Z
+	public final fun getOnProgressClickListener ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressClickListener;
+	public final fun getOrientation ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+	public final fun getPadding ()I
+	public final fun getRadius ()F
+	public final fun getRadiusArray ()[F
+	public final fun setColor (I)V
+	public final fun setColorGradientCenter (I)V
+	public final fun setColorGradientEnd (I)V
+	public final fun setColorGradientStart (I)V
+	public final fun setHighlight (Landroid/graphics/drawable/Drawable;)V
+	public final fun setHighlightAlpha (F)V
+	public final fun setHighlightColor (I)V
+	public final fun setHighlightThickness (I)V
+	public final fun setHighlighting (Z)V
+	public final fun setOnProgressClickListener (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressClickListener;)V
+	public final fun setOrientation (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;)V
+	public final fun setPadding (I)V
+	public final fun setRadius (F)V
+	public final fun setRadiusArray ([F)V
+	public final fun updateHighlightView ()V
+}
+
+public abstract interface class com/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressChangeListener {
+	public abstract fun onChange (F)V
+}
+
+public abstract interface class com/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressClickListener {
+	public abstract fun onClickProgress (Z)V
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints : java/lang/Enum {
+	public static final field ALIGN_CONTAINER Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;
+	public static final field ALIGN_PROGRESS Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;
+	public static fun valueOf (Ljava/lang/String;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;
+	public static fun values ()[Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView : android/widget/FrameLayout {
+	public fun <init> (Landroid/content/Context;)V
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;)V
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V
+	public final fun applyTextForm (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm;)V
+	public final fun getAutoAnimate ()Z
+	public final fun getBorderColor ()I
+	public final fun getBorderWidth ()I
+	public final fun getColorBackground ()I
+	public final fun getDuration ()J
+	public final fun getHighlightView ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/HighlightView;
+	public final fun getInterpolator ()Landroid/view/animation/Interpolator;
+	public final fun getLabelColorInner ()I
+	public final fun getLabelColorOuter ()I
+	public final fun getLabelConstraints ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;
+	public final fun getLabelGravity ()Ljava/lang/Integer;
+	public final fun getLabelSize ()F
+	public final fun getLabelSpace ()F
+	public final fun getLabelText ()Ljava/lang/CharSequence;
+	public final fun getLabelTypeface ()I
+	public final fun getLabelTypefaceObject ()Landroid/graphics/Typeface;
+	public final fun getLabelView ()Landroid/widget/TextView;
+	public final fun getMax ()F
+	public final fun getMin ()F
+	public final fun getOrientation ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+	public final fun getProgress ()F
+	public final fun getProgressAnimation ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public final fun getProgressFromPrevious ()Z
+	public final fun getRadius ()F
+	public final fun getRadiusArray ()[F
+	public final fun isAnimating ()Z
+	public final fun isProgressedMax ()Z
+	public final fun isVertical ()Z
+	public final fun progressAnimate ()V
+	public final fun setAnimating (Z)V
+	public final fun setAutoAnimate (Z)V
+	public final fun setBorderColor (I)V
+	public final fun setBorderWidth (I)V
+	public final fun setColorBackground (I)V
+	public final fun setDuration (J)V
+	public final fun setInterpolator (Landroid/view/animation/Interpolator;)V
+	public final fun setLabelColorInner (I)V
+	public final fun setLabelColorOuter (I)V
+	public final fun setLabelConstraints (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;)V
+	public final fun setLabelGravity (Ljava/lang/Integer;)V
+	public final fun setLabelSize (F)V
+	public final fun setLabelSpace (F)V
+	public final fun setLabelText (Ljava/lang/CharSequence;)V
+	public final fun setLabelTypeface (I)V
+	public final fun setLabelTypefaceObject (Landroid/graphics/Typeface;)V
+	public final fun setMax (F)V
+	public final fun setMin (F)V
+	public final fun setOnProgressChangeListener (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressChangeListener;)V
+	public final synthetic fun setOnProgressChangeListener (Lkotlin/jvm/functions/Function1;)V
+	public final fun setOnProgressClickListener (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressClickListener;)V
+	public final synthetic fun setOnProgressClickListener (Lkotlin/jvm/functions/Function1;)V
+	public final fun setOrientation (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;)V
+	public final fun setProgress (F)V
+	public final fun setProgressAnimation (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;)V
+	public final fun setProgressFromPrevious (Z)V
+	public final fun setRadius (F)V
+	public final fun setRadiusArray ([F)V
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder {
+	public fun <init> (Landroid/content/Context;)V
+	public final fun build ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView;
+	public final fun setAutoAnimate (Z)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setColorBackground (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setDuration (J)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setHeight (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setHighlightColor (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setHighlightThickness (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setHighlighting (Z)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setInterpolator (Landroid/view/animation/Interpolator;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelColorInner (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelColorOuter (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelConstraints (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressLabelConstraints;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelGravity (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelSize (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelSpace (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelText (Ljava/lang/CharSequence;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelTextResource (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelTypeface (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setLabelTypeface (Landroid/graphics/Typeface;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setMax (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setMin (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setOnProgressChangeListener (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressChangeListener;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final synthetic fun setOnProgressChangeListener (Lkotlin/jvm/functions/Function1;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setOnProgressClickListener (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/OnProgressClickListener;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final synthetic fun setOnProgressClickListener (Lkotlin/jvm/functions/Function1;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setOrientation (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgress (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressViewAnimation (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarAlpha (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarColor (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarColorGradientCenter (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarColorGradientEnd (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarColorGradientStart (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarRadii ([F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setProgressbarRadius (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setRadii ([F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setRadius (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setSize (II)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+	public final fun setTextForm (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView$Builder;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation : java/lang/Enum {
+	public static final field ACCELERATEDECELERATE Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public static final field BOUNCE Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public static final field DECELERATE Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public static final field NORMAL Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public final fun getInterpolator ()Landroid/view/animation/Interpolator;
+	public final fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+	public static fun values ()[Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewAnimation;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewKt {
+	public static final synthetic fun progressView (Landroid/content/Context;Lkotlin/jvm/functions/Function1;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressView;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation : java/lang/Enum {
+	public static final field HORIZONTAL Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+	public static final field VERTICAL Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+	public final fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+	public static fun values ()[Lcom/emmanuel\emmanuelkorircv\Utility\progressview/ProgressViewOrientation;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/TextForm {
+	public fun <init> (Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;)V
+	public final fun getText ()Ljava/lang/CharSequence;
+	public final fun getTextColor ()I
+	public final fun getTextSize ()F
+	public final fun getTextStyle ()I
+	public final fun getTextStyleObject ()Landroid/graphics/Typeface;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder {
+	public field text Ljava/lang/CharSequence;
+	public field textColor I
+	public field textSize F
+	public field textTypeface I
+	public field textTypefaceObject Landroid/graphics/Typeface;
+	public fun <init> (Landroid/content/Context;)V
+	public final fun build ()Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm;
+	public final fun setText (Ljava/lang/CharSequence;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextColor (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextColorResource (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextResource (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextSize (F)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextTypeface (I)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+	public final fun setTextTypeface (Landroid/graphics/Typeface;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm$Builder;
+}
+
+public final class com/emmanuel\emmanuelkorircv\Utility\progressview/TextFormKt {
+	public static final synthetic fun textForm (Landroid/content/Context;Lkotlin/jvm/functions/Function1;)Lcom/emmanuel\emmanuelkorircv\Utility\progressview/TextForm;
+}
+
