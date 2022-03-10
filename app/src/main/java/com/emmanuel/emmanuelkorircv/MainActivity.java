@@ -1,5 +1,6 @@
 package com.emmanuel.emmanuelkorircv;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
@@ -56,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView Settings;
     private ImageView MeImg,ExperiencesImg,Contactimg,OtherImg,Preferencesimg,Exitimg;
     private CardView Contact,Experiences,Personal_data,My_documents,Preferences,Exit;
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -462,28 +467,54 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
 
-        powerMenu = new PowerMenu.Builder(MainActivity.this)
-                // .addItemList(list) //
-                .addItem(new PowerMenuItem("Preferences",  R.drawable.ic_settings_colored))
-                .addItem(new PowerMenuItem("Exit",  R.drawable.ic_exit_2)) // aad an item list.
-                .setAnimation(MenuAnimation.DROP_DOWN) // Animation start point (TOP | LEFT)
-                .setIconSize(24)
-                .setMenuRadius(10f) // sets the corner radius.
-                .setMenuShadow(10f) // sets the shadow.
-                .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.purple_700))
-                .setTextGravity(Gravity.CENTER)
-                .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
-                .setTextSize(15)
-                .setSelectedTextColor(Color.WHITE)
-                .setMenuColor(Color.WHITE)
-                .setSelected(1)
-                .setDivider(getDrawable(R.drawable.ic_line_h_svgrepo_com))
-                .setDividerHeight(10)
-                .setSelectedMenuColor(ContextCompat.getColor(MainActivity.this, android.R.color.holo_blue_dark))
-                .setSelectedTextColor(Color.WHITE) // sets the color of the selected item text.
-                .setOnMenuItemClickListener(onMenuItemClickListener)
-                .build();
+            powerMenu = new PowerMenu.Builder(MainActivity.this)
+                    // .addItemList(list) //
+                    .addItem(new PowerMenuItem("Preferences", R.drawable.setting_dark))
+                    .addItem(new PowerMenuItem("Exit", R.drawable.back_dark)) // aad an item list.
+                    .setAnimation(MenuAnimation.DROP_DOWN) // Animation start point (TOP | LEFT)
+                    .setIconSize(24)
+                    .setMenuRadius(10f) // sets the corner radius.
+                    .setMenuShadow(10f) // sets the shadow.
+                    .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black))
+                    .setTextGravity(Gravity.CENTER)
+                    .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
+                    .setTextSize(15)
+                    .setBackgroundColor(getColor(R.color.grey))
+                    .setSelectedTextColor(R.color.message_bubble_grey)
+                    .setMenuColor(Color.WHITE)
+                    .setSelected(1)
+                    .setDivider(getDrawable(R.drawable.ic_line_h_svgrepo_com_dark))
+                    .setDividerHeight(10)
+                    .setSelectedMenuColor(ContextCompat.getColor(MainActivity.this, android.R.color.holo_blue_dark))
+                    .setSelectedTextColor(Color.WHITE) // sets the color of the selected item text.
+                    .setOnMenuItemClickListener(onMenuItemClickListener)
+                    .build();
+        }else
+        {
+            powerMenu = new PowerMenu.Builder(MainActivity.this)
+                    // .addItemList(list) //
+                    .addItem(new PowerMenuItem("Preferences", R.drawable.settings))
+                    .addItem(new PowerMenuItem("Exit", R.drawable.back)) // aad an item list.
+                    .setAnimation(MenuAnimation.DROP_DOWN) // Animation start point (TOP | LEFT)
+                    .setIconSize(24)
+                    .setMenuRadius(10f) // sets the corner radius.
+                    .setMenuShadow(10f) // sets the shadow.
+                    .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.purple_700))
+                    .setTextGravity(Gravity.CENTER)
+                    .setTextTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD))
+                    .setTextSize(15)
+                    .setSelectedTextColor(Color.WHITE)
+                    .setMenuColor(Color.WHITE)
+                    .setSelected(1)
+                    .setDivider(getDrawable(R.drawable.ic_line_h_svgrepo_com))
+                    .setDividerHeight(10)
+                    .setSelectedMenuColor(ContextCompat.getColor(MainActivity.this, android.R.color.holo_blue_dark))
+                    .setSelectedTextColor(Color.WHITE) // sets the color of the selected item text.
+                    .setOnMenuItemClickListener(onMenuItemClickListener)
+                    .build();
+        }
 
     }
 

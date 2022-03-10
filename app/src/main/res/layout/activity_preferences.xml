@@ -190,7 +190,7 @@
               app:pcv_backgroundColor="@color/cardColor"
               app:pcv_progressColor="#071B8F"
               app:pcv_backgroundBarColor="#52BCBCBC"
-              app:pcv_textColor="@color/blueDark"
+              app:pcv_textColor="#192C97"
               app:pcv_textStyle="bold"
               app:pcv_textSize="16dp"
               app:pcv_animDuration="800"
@@ -274,6 +274,7 @@
               app:pcv_startAngle="90"/>
 
           <TextView
+                android:id="@+id/Text_view_storage_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -327,12 +328,12 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center_horizontal"
-
                 android:textStyle="bold"
                 android:text="CPU 0"
                 android:textAlignment="center"
@@ -377,6 +378,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -425,6 +427,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -472,13 +475,14 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="4dp"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:text="CPU 4"
+                android:text="CPU 3"
                 android:textAlignment="center"
                 android:textColor="@color/blueDark"
                 android:textSize="17dp" />
@@ -536,6 +540,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -584,6 +589,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -632,6 +638,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -679,6 +686,7 @@
                 app:pcv_startAngle="90"/>
 
             <TextView
+                android:id="@+id/Text_view_cpu_freq_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -720,6 +728,7 @@
           android:orientation="vertical">
 
           <TextView
+              android:id="@+id/storage_label"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textSize="17dp"
@@ -744,8 +753,6 @@
               app:progressView_autoAnimate="true"
               app:progressView_radius="12dp"
               app:progressView_padding="1dp"
-              app:progressView_labelColorInner="@color/white"
-              app:progressView_labelColorOuter="@color/black"
               app:progressView_labelSize="13sp"
               app:progressView_labelSpace="10dp"
               app:progressView_labelText="RAM"
@@ -774,8 +781,6 @@
               app:progressView_autoAnimate="true"
               app:progressView_radius="12dp"
               app:progressView_padding="1dp"
-              app:progressView_labelColorInner="@color/white"
-              app:progressView_labelColorOuter="@color/black"
               app:progressView_labelSize="13sp"
               app:progressView_labelSpace="10dp"
               app:progressView_labelText="Storage"
@@ -804,8 +809,7 @@
               app:progressView_autoAnimate="true"
               app:progressView_radius="12dp"
               app:progressView_padding="1dp"
-              app:progressView_labelColorInner="@color/white"
-              app:progressView_labelColorOuter="@color/black"
+
               app:progressView_labelSize="13sp"
               app:progressView_labelSpace="10dp"
               app:progressView_labelText="External Storage"

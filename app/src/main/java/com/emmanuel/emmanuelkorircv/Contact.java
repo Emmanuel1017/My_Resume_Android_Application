@@ -17,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class Contact extends AppCompatActivity {
     private ConstraintLayout Backbg;
     private TextView Contactme,Compuresci,Contactme2;
     private View View1,View2,View3;
+    private LinearLayout CantactLinear;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -94,6 +96,7 @@ public class Contact extends AppCompatActivity {
         View1=findViewById(R.id.view_contact_1);
         View2=findViewById(R.id.view_contact_2);
         View3=findViewById(R.id.view3);
+        CantactLinear=findViewById(R.id.Linear_Layout_contact);
 
 
 
@@ -115,6 +118,7 @@ public class Contact extends AppCompatActivity {
             View1.setBackgroundColor(getColor(R.color.white));
             View2.setBackgroundColor(getColor(R.color.white));
             View3.setBackgroundColor(getColor(R.color.white));
+            CantactLinear.setBackgroundColor(getColor(R.color.grey));
 
             Back.setImageDrawable(getDrawable(R.drawable.ic_baseline_arrow_back_white));
         }

@@ -55,9 +55,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:letterSpacing="0.03"
                 android:text="@string/large_text"
                 android:textAlignment="center"
-                android:textColor="@color/colorBlack"
+                android:textColor="#030F59"
                 android:textSize="16dp" />
 
 
@@ -133,10 +135,6 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="20dp">
 
-
-
-
-
                 <com.hanks.htextview.typer.TyperTextView
                     android:id="@+id/Line_Htext_View"
                     android:layout_width="wrap_content"
@@ -161,6 +159,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="20dp"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center_horizontal"
                android:layout_marginBottom="30dp">
 
 
@@ -169,61 +171,130 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="Python"
+                    android:text="# Python"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#ffaa66cc"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/white" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="java"
+                    android:text="# java"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#ff669900"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/white"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="C"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/white"
+                    android:text="# C"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#D50000"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
-                    android:id="@+id/tagView4"
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="C#"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tagView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:text="# C#"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#F40571"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -235,59 +306,132 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="C++"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="# C++"
+                    android:textColor="@color/white"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#FFAB00"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="ANGULAR"
+                    android:text="# ANGULAR"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#FFD600"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="PHP"
+                    android:textColor="@color/white"
+                    android:text="# PHP"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00258C"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/Linear_View_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_card"
+                        android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    android:text="HTML/CSS"
+                    android:text="#HTML/CSS"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00BFA5"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
@@ -295,61 +439,131 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="JAVASCRIPT"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# JAVASCRIPT"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#2962FF"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="VUE"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# VUE"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#C51162"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="REACT"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# REACT"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00B8D4"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="SHELL"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# SHELL"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00C853"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -357,61 +571,135 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="SSL"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# SSL"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#000000"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="KOTLIN"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# KOTLIN"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#FF6D00"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="DART"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# DART"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#D50000"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
 
-                <com.veinhorn.tagview.TagView
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="RUBY"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# RUBY"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#0091EA"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -419,61 +707,135 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="VB"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# VB"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#DD2C00"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="KOTLIN"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# GO"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#AA00FF"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
 
-                <com.veinhorn.tagview.TagView
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="React-native"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# React-native"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#6200EA"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
 
-                <com.veinhorn.tagview.TagView
-                    android:id="@+id/tagView20"
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="OpenCv"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tagView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# OpenCv"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00BFA5"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -481,77 +843,267 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <com.veinhorn.tagview.TagView
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="CISCO"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# CISCO"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#FFD600"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="SSL"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# SSL"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#00FF6A"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
                     android:id="@+id/tagView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:text="Go"
-                    app:tagColor="@color/black"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:text="# BOOTSTRAP" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <com.veinhorn.tagview.TagView
-                    android:id="@+id/tagView24"
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" >
+                </Space>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
-                    android:layout_weight="1"
-                    android:text="Daraja"
+                    android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/Linear_View_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_card"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tagView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"
+                    android:text="# Daraja"
                     android:textAlignment="center"
-                    android:textSize="14sp"
-                    app:tagColor="#0091EA"
-                    app:tagType="modern_trapezium_reversed"
-                    app:tagUpperCase="true" />
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
 
 
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true"
+                   android:layout_centerVertical="true"
+                   android:gravity="center_horizontal"
+                   android:layout_margin="5dp"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="6dp"
+                       android:elevation="10dp">
+                       <LinearLayout
+                           android:id="@+id/Linear_View_25"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/gradient_card"
+                           android:orientation="vertical">
+                           <TextView
+                               android:id="@+id/tagView25"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginRight="4dp"
+                               android:layout_marginLeft="4dp"
+                               android:textColor="@color/white"
+                               android:text="# RUST"
+                               android:textAlignment="center"
+                               android:textSize="17dp"
+                               android:textStyle="bold" />
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+
+                   <Space
+                       android:layout_width="0dp"
+                       android:layout_height="1dp"
+                       android:layout_weight="1" >
+                   </Space>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="6dp"
+                       android:elevation="10dp">
+                       <LinearLayout
+                           android:id="@+id/Linear_View_26"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/gradient_card"
+                           android:orientation="vertical">
+                           <TextView
+                               android:id="@+id/tagView26"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginRight="4dp"
+                               android:layout_marginLeft="4dp"
+                               android:textColor="@color/white"
+                               android:text="# BABEL"
+                               android:textAlignment="center"
+                               android:textSize="17dp"
+                               android:textStyle="bold" />
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+
+                   <Space
+                       android:layout_width="0dp"
+                       android:layout_height="1dp"
+                       android:layout_weight="1" >
+                   </Space>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="6dp"
+                       android:elevation="10dp">
+                       <LinearLayout
+                           android:id="@+id/Linear_View_27"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/gradient_card"
+                           android:orientation="vertical">
+                           <TextView
+                               android:id="@+id/tagView27"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginRight="4dp"
+                               android:layout_marginLeft="4dp"
+                               android:textColor="@color/white"
+                               android:textAlignment="center"
+                               android:textSize="17dp"
+                               android:textStyle="bold"
+                               android:text="# MY SQL" />
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+
+                   <Space
+                       android:layout_width="0dp"
+                       android:layout_height="1dp"
+                       android:layout_weight="1" >
+                   </Space>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="6dp"
+                       android:elevation="10dp">
+                       <LinearLayout
+                           android:id="@+id/Linear_View_28"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/gradient_card"
+                           android:orientation="vertical">
+                           <TextView
+                               android:id="@+id/tagView28"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginRight="4dp"
+                               android:layout_marginLeft="4dp"
+                               android:textColor="@color/white"
+                               android:text="# SQ-LITE"
+                               android:textAlignment="center"
+                               android:textSize="17dp"
+                               android:textStyle="bold" />
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+               </LinearLayout>
+
+
          </LinearLayout>
-
-
-
-
-
-
-
-
         </LinearLayout>
-
-
     </androidx.core.widget.NestedScrollView>
 
 

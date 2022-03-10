@@ -111,12 +111,12 @@ public class Preferences extends AppCompatActivity {
     private Map<String ,Object> userData;
     private PercentageChartView FloatViewRAM,FloatCPU,FloatStarage,FloatCPUFrq0,FloatCPUFrq1,FloatCPUFrq2,FloatCPUFrq3,FloatCPUFrq4,FloatCPUFrq5,FloatCPUFrq6,FloatCPUFrq7;
     private Thread threadStats,ThredStatsCpu;
-    private  TextView TempCpu0,TempCpu1,TempCpu2,TempCpu3,TempCpu4,TempCpu5,TempCpu6,TempCpu7;
-    private LinearLayout CPURow2,LinearLayoutstorage;
+    private  TextView TempCpu0,TempCpu1,TempCpu2,TempCpu3,TempCpu4,TempCpu5,TempCpu6,TempCpu7,LabelCPU0,LabelCPU1,LabelCPU2,LabelCPU3,LabelCPU4,LabelCPU5,LabelCPU6,LabelCPU7,LabelCPUTop,LabelRAMTop,LabelStorageTop;
+    private LinearLayout CPURow2,LinearLayoutstorage,DayNight;
     private Handler handler1,handlerStats;
     private Runnable runnableCode1,runnableCodeStats;
     private ProgressView InternalStorage,ExternalStorage,RAMProgressview;
-    private TextView InternalStorageText,ExternalStorageText,RAMText;
+    private TextView InternalStorageText,ExternalStorageText,RAMText,StorageLabel,DayNigtText1,DayNightText2;
 
 
 
@@ -182,14 +182,19 @@ public class Preferences extends AppCompatActivity {
         db=FirebaseFirestore.getInstance();
         sharedPreferences=getSharedPreferences(Shared_Preferences.SHARED_PREF, Context.MODE_PRIVATE);
 
+        DayNigtText1=findViewById(R.id.Night_Day_Text);
+        DayNightText2=findViewById(R.id.Night_Day_text_2);
+
         userData=new HashMap<>();
+        DayNight=findViewById(R.id.layout_Day_Night_Card);
+        StorageLabel=findViewById(R.id.storage_label);
 
         FloatViewRAM=findViewById(R.id.view_ram_float);
         FloatCPU=findViewById(R.id.view_cpu_float);
         FloatStarage=findViewById(R.id.view_storage_float);
         FloatCPUFrq0=findViewById(R.id.view_cpu_float_freq0);
         FloatCPUFrq1=findViewById(R.id.view_cpu_float_freq1);
-        FloatCPUFrq2=findViewById(R.id.view_cpu_float_freq2);FloatCPUFrq0=findViewById(R.id.view_cpu_float_freq0);
+        FloatCPUFrq2=findViewById(R.id.view_cpu_float_freq2);
         FloatCPUFrq3=findViewById(R.id.view_cpu_float_freq3);
         FloatCPUFrq4=findViewById(R.id.view_cpu_float_freq4);
         FloatCPUFrq5=findViewById(R.id.view_cpu_float_freq5);
@@ -204,6 +209,21 @@ public class Preferences extends AppCompatActivity {
         TempCpu5=findViewById(R.id.cpu_5_temp);
         TempCpu6=findViewById(R.id.cpu_6_temp);
         TempCpu7=findViewById(R.id.cpu_7_temp);
+
+        LabelCPUTop=findViewById(R.id.Text_View_cputop);
+        LabelRAMTop=findViewById(R.id.Text_view_ram_top);
+        LabelStorageTop=findViewById(R.id.Text_view_storage_top);
+
+
+        LabelCPU0=findViewById(R.id.Text_view_cpu_freq_0);
+        LabelCPU1=findViewById(R.id.Text_view_cpu_freq_1);
+        LabelCPU2=findViewById(R.id.Text_view_cpu_freq_2);
+        LabelCPU3=findViewById(R.id.Text_view_cpu_freq_3);
+        LabelCPU4=findViewById(R.id.Text_view_cpu_freq_4);
+        LabelCPU5=findViewById(R.id.Text_view_cpu_freq_5);
+        LabelCPU6=findViewById(R.id.Text_view_cpu_freq_6);
+        LabelCPU7=findViewById(R.id.Text_view_cpu_freq_7);
+
 
         CPURow2=findViewById(R.id.Linear_Layout_cpu_Row_2);
 
@@ -272,14 +292,84 @@ public class Preferences extends AppCompatActivity {
             View6.setBackgroundColor(Color.parseColor("#FFFFFF"));
             View7.setBackgroundColor(Color.parseColor("#FFFFFF"));
             LinearLayoutstorage.setBackgroundColor(Color.parseColor("#3A3B3C"));
+            DayNight.setBackgroundResource(R.drawable.gradient_card_dark);
            // View8.setBackgroundColor(Color.parseColor("#FFFFFF"));
            // View9.setBackgroundColor(Color.parseColor("#FFFFFF"));
            // View10.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            FloatViewRAM.setBackgroundColor(R.color.white);
-            FloatCPU.setBackgroundColor(R.color.white);
-            FloatStarage.setBackgroundColor(R.color.white);
 
             FloatViewRAM.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPU.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatStarage.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq0.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq1.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq2.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq3.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq4.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq5.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq6.setTextColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq7.setTextColor(Color.parseColor("#FFFFFF"));
+
+            StorageLabel.setTextColor(Color.parseColor("#FFFFFF"));
+            InternalStorageText.setTextColor(Color.parseColor("#FFFFFF"));
+            ExternalStorageText.setTextColor(Color.parseColor("#FFFFFF"));
+            RAMText.setTextColor(Color.parseColor("#FFFFFF"));
+
+            TempCpu0.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu1.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu2.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu3.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu4.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu5.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu6.setTextColor(Color.parseColor("#FFFFFF"));
+            TempCpu7.setTextColor(Color.parseColor("#FFFFFF"));
+
+
+            LabelCPU0.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU1.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU2.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU3.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU4.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU5.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU6.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelCPU7.setTextColor(Color.parseColor("#FFFFFF"));
+
+            LabelCPUTop.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelRAMTop.setTextColor(Color.parseColor("#FFFFFF"));
+            LabelStorageTop.setTextColor(Color.parseColor("#FFFFFF"));
+
+            FloatCPU.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatViewRAM.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatStarage.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq0.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq1.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq2.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq3.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq4.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq5.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq6.setProgressColor(Color.parseColor("#FFFFFF"));
+            FloatCPUFrq7.setProgressColor(Color.parseColor("#FFFFFF"));
+
+            DayNigtText1.setTextColor(Color.parseColor("#FFFFFF"));
+            DayNightText2.setTextColor(Color.parseColor("#FFFFFF"));
+
+
+            InternalStorage.setLabelColorInner(getColor(R.color.black));
+            ExternalStorage.setLabelColorInner(getColor(R.color.black));
+            RAMProgressview.setLabelColorInner(getColor(R.color.black));
+
+            InternalStorage.setLabelColorOuter(getColor(R.color.black));
+            ExternalStorage.setLabelColorOuter(getColor(R.color.black));
+            RAMProgressview.setLabelColorOuter(getColor(R.color.black));
+
+
+
+
+            InternalStorage.setBorderColor(getColor(R.color.white));
+            ExternalStorage.setBorderColor(getColor(R.color.white));
+            RAMProgressview.setBorderColor(getColor(R.color.white));
+
+
+
 
         }else{
             setTheme(R.style.AppTheme);
@@ -296,6 +386,12 @@ public class Preferences extends AppCompatActivity {
             iconSwitch.setBackgroundColor(getColor(R.color.black));
         }
 
+        DayNight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iconSwitch.toggle();
+            }
+        });
 
         iconSwitch.setCheckedChangeListener(new IconSwitch.CheckedChangeListener()
         {
@@ -554,6 +650,85 @@ public class Preferences extends AppCompatActivity {
                 @Override
                 public void run() {
 
+                    // If the night mode is correct by default, it sets the Night Mode theme.
+                    if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+                        FloatViewRAM.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPU.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatStarage.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq0.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq1.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq2.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq3.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq4.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq5.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq6.setTextColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq7.setTextColor(Color.parseColor("#FFFFFF"));
+
+
+                        FloatCPU.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatViewRAM.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatStarage.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq0.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq1.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq2.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq3.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq4.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq5.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq6.setProgressColor(Color.parseColor("#FFFFFF"));
+                        FloatCPUFrq7.setProgressColor(Color.parseColor("#FFFFFF"));
+
+                        InternalStorage.setLabelColorInner(getColor(R.color.black));
+                        ExternalStorage.setLabelColorInner(getColor(R.color.black));
+                        RAMProgressview.setLabelColorInner(getColor(R.color.black));
+
+                        InternalStorage.setLabelColorOuter(getColor(R.color.black));
+                        ExternalStorage.setLabelColorOuter(getColor(R.color.black));
+                        RAMProgressview.setLabelColorOuter(getColor(R.color.black));
+
+
+
+                    }
+                    else
+                    {
+                        FloatViewRAM.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPU.setTextColor(Color.parseColor("#192C97"));
+                        FloatStarage.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq0.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq1.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq2.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq3.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq4.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq5.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq6.setTextColor(Color.parseColor("#192C97"));
+                        FloatCPUFrq7.setTextColor(Color.parseColor("#192C97"));
+
+
+                        FloatCPU.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatViewRAM.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatStarage.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq0.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq1.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq2.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq3.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq4.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq5.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq6.setProgressColor(Color.parseColor("#071B8F"));
+                        FloatCPUFrq7.setProgressColor(Color.parseColor("#071B8F"));
+
+
+                        InternalStorage.setLabelColorInner(getColor(R.color.white));
+                        ExternalStorage.setLabelColorInner(getColor(R.color.white));
+                        RAMProgressview.setLabelColorInner(getColor(R.color.white));
+
+                        InternalStorage.setLabelColorOuter(getColor(R.color.white));
+                        ExternalStorage.setLabelColorOuter(getColor(R.color.white));
+                        RAMProgressview.setLabelColorOuter(getColor(R.color.white));
+
+
+
+                    }
+
+
                     ActivityManager actManager = (ActivityManager) Preferences.this.getSystemService(Context.ACTIVITY_SERVICE);
                     ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
                     assert actManager != null;
@@ -576,7 +751,6 @@ public class Preferences extends AppCompatActivity {
 
                     //Toast.makeText(Preferences.this, getTotalInternalMemorySize()+"",Toast.LENGTH_SHORT).show();
 
-                    InternalStorage.setAnimating(true);
                     InternalStorage.setProgress(Storageinternal);
                     InternalStorage.setLabelText("Internal Storage");
 
@@ -586,7 +760,6 @@ public class Preferences extends AppCompatActivity {
                     {
                         float usedexternalstorage = (float)(getTotalExternalMemorySize()-getAvailableExternalMemorySize());
                         float Storageexternal = (float)(usedexternalstorage/getTotalExternalMemorySize()*100);
-                        ExternalStorage.setAnimating(true);
                         ExternalStorage.setProgress(Storageexternal);
                         ExternalStorageText.setText("Size: "+formatSize(getTotalExternalMemorySize())+"  used: "+formatSize(getTotalExternalMemorySize()-getAvailableExternalMemorySize())+"   Free: "+formatSize(getAvailableExternalMemorySize()));
 
@@ -598,6 +771,7 @@ public class Preferences extends AppCompatActivity {
 
                     FloatStarage.setProgress(Storageinternal,true);
 
+                    //for and switch
                     for (int i = 0; i <50; i++) {
                          switch (i)
                         {
@@ -641,6 +815,9 @@ public class Preferences extends AppCompatActivity {
                 @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void run() {
+
+
+
                    // -----------------------------------//cpus frequency--------------------------------
                     float percent =(float)(takeCurrentCpuFreq(0) / takeMaxCpuFreq(0) * 100);
                     FloatCPU.setProgress(percent, true);

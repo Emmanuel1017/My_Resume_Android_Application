@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,7 @@ public class My_data extends AppCompatActivity {
     private View View1,View2;
     private CoordinatorLayout MyView;
     private CollapsingToolbarLayout CollapseToolbar;
+    private LinearLayout Linear1,Linear2,Linear3,Linear4,Linear5,Linear6,Linear7,Linear8,Linear9,Linear10,Linear11,Linear12,Linear13,Linear14,Linear15,Linear16,Linear17,Linear18,Linear19,Linear20,Linear21,Linear22,Linear23,Linear24,Linear25,Linear26,Linear27,Linear28;
 
 
 
@@ -97,6 +99,37 @@ public class My_data extends AppCompatActivity {
         MyView=findViewById(R.id.main_layout_mydata);
         CollapseToolbar=findViewById(R.id.toolbar_layout);
         Backdata=findViewById(R.id.back_button_my_data);
+
+
+        Linear1=findViewById(R.id.Linear_View_1);
+        Linear2=findViewById(R.id.Linear_View_2);
+        Linear3=findViewById(R.id.Linear_View_3);
+        Linear4=findViewById(R.id.Linear_View_4);
+        Linear5=findViewById(R.id.Linear_View_5);
+        Linear6=findViewById(R.id.Linear_View_6);
+        Linear7=findViewById(R.id.Linear_View_7);
+        Linear8=findViewById(R.id.Linear_View_8);
+        Linear9=findViewById(R.id.Linear_View_9);
+        Linear10=findViewById(R.id.Linear_View_10);
+        Linear11=findViewById(R.id.Linear_View_11);
+        Linear12=findViewById(R.id.Linear_View_12);
+        Linear13=findViewById(R.id.Linear_View_13);
+        Linear14=findViewById(R.id.Linear_View_14);
+        Linear15=findViewById(R.id.Linear_View_15);
+        Linear16=findViewById(R.id.Linear_View_16);
+        Linear17=findViewById(R.id.Linear_View_17);
+        Linear18=findViewById(R.id.Linear_View_18);
+        Linear19=findViewById(R.id.Linear_View_19);
+        Linear20=findViewById(R.id.Linear_View_20);
+        Linear21=findViewById(R.id.Linear_View_21);
+        Linear22=findViewById(R.id.Linear_View_22);
+        Linear23=findViewById(R.id.Linear_View_23);
+        Linear24=findViewById(R.id.Linear_View_24);
+        Linear25=findViewById(R.id.Linear_View_25);
+        Linear26=findViewById(R.id.Linear_View_26);
+        Linear27=findViewById(R.id.Linear_View_27);
+        Linear28=findViewById(R.id.Linear_View_28);
+
 
         //line textview array
         Arraymsgs.add("Python");
@@ -214,6 +247,34 @@ public class My_data extends AppCompatActivity {
 // Start the initial runnable task by posting through the handler
             handler.post(runnableCode);
 
+            Linear1.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear2.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear3.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear4.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear5.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear6.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear7.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear8.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear9.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear10.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear11.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear12.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear13.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear14.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear15.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear16.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear17.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear18.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear19.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear20.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear21.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear22.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear23.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear24.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear25.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear26.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear27.setBackgroundResource(R.drawable.gradient_card_dark);
+            Linear28.setBackgroundResource(R.drawable.gradient_card_dark);
 
         }else{
 
@@ -228,9 +289,6 @@ public class My_data extends AppCompatActivity {
                 public void run() {
 
                     if(Position>=Arraymsgs.size())
-
-
-
                         Position = 0;
                     LineT.animateText(Arraymsgs.get(Position));
                     LineT.setTextColor(Arrayclrs.get(Position));
