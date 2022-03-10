@@ -10,7 +10,7 @@ COMPILE WITH ANDROID STUDIO.
 -Timeline view 
 -Simple design and code.
 
-Download it here: https://github.com/Emmanuel1017/My_Resume_Android_Application/releases/tag/MyAndroidResume
+Download it here: https://github.com/Emmanuel1017/My_Resume_Android_Application/releases/download/MyAndroidResume/my_resume.apk
 
 ![Screenshot_2022-03-06-20-32-41-043_com emmanuel emmanuelkorircv](https://user-images.githubusercontent.com/41972019/156934813-215911ad-46f3-4598-985c-65ebe5d74452.jpg)
 
