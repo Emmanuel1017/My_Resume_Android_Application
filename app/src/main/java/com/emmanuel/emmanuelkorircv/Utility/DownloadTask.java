@@ -44,7 +44,6 @@ public class DownloadTask {
 
         //Start Downloading Task
         checkforDownloadedFolder();
-
     }
 
 
@@ -67,8 +66,6 @@ public class DownloadTask {
 
     //Open downloaded folder
     private void checkforDownloadedFolder() {
-
-
         //First check if SD Card is present or not
         if (new CheckForSDCard().isSDCardPresent()) {
 
@@ -80,11 +77,15 @@ public class DownloadTask {
             //If file is not present then display Toast
             if (apkStorage.exists()&&(fileisFilePresent() )) {
 
-                Intent intent = new Intent(context, File_viewer.class);
-                ((Activity)context).startActivity(intent);
+                if(isConnectingToInternet())
+                {
+                    new DownloadingTask().execute();
 
+                }else {
 
-
+                    Intent intent = new Intent(context, File_viewer.class);
+                    ((Activity) context).startActivity(intent);
+                }
             }
             else if (apkStorage.exists() && (!fileisFilePresent() ))
             {
@@ -170,7 +171,7 @@ public class DownloadTask {
             View rootView = ((Activity)context).getWindow().getDecorView().findViewById(android.R.id.content);
 
             //context calling of rootview
-            Snackbar snack = Snackbar.make(rootView,"Downloading my RESUME!",      Snackbar.LENGTH_LONG);
+            Snackbar snack = Snackbar.make(rootView,"Downloading my CV!",      Snackbar.LENGTH_LONG);
             SnackBarHelper.configSnackbar(context, snack);
             snack.show();
             pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));

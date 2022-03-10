@@ -691,11 +691,7 @@ public class My_data extends AppCompatActivity {
         }
         else {
 
-
             new DownloadTask(My_data.this, Faba, Utils.downloadPdfUrl);
-
-
-
 
         }
     }
@@ -758,10 +754,7 @@ public class My_data extends AppCompatActivity {
                             + Utils.downloadDirectory);
 
             //If file is not present then display Toast
-            if (!apkStorage.exists())
-                Toast.makeText(My_data.this, "Right now there is no directory. Please download some file first.", Toast.LENGTH_SHORT).show();
 
-            else {
 
                 //If directory is present Open Folder
 
@@ -772,7 +765,7 @@ public class My_data extends AppCompatActivity {
                         + "/" + Utils.downloadDirectory);
                 intent.setDataAndType(uri, "file/*");
                 startActivity(Intent.createChooser(intent, "Open Download Folder"));
-            }
+
 
         } else
             Toast.makeText(My_data.this, "Oops!! There is no SD Card.", Toast.LENGTH_SHORT).show();

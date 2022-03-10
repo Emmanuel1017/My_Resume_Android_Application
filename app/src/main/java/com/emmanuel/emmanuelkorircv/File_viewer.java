@@ -64,7 +64,7 @@ public class File_viewer extends AppCompatActivity {
         File file = new File(path);
         if (file.exists())
         {
-            Toast.makeText(File_viewer.this,"pdf exists"+path,Toast.LENGTH_LONG).show();
+            Toast.makeText(File_viewer.this,"This is my resume located at "+path,Toast.LENGTH_LONG).show();
             pdfView.fromFile(file).load();
         }
 

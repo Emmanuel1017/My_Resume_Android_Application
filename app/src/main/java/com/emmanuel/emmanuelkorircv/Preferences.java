@@ -542,7 +542,7 @@ public class Preferences extends AppCompatActivity {
                     public void run() {
 
                         sDialog.dismiss();
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emmanuelkorircv.web.app/"));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cariboudevs.com/"));
                         startActivity(browserIntent);
 
                     }
@@ -570,7 +570,7 @@ public class Preferences extends AppCompatActivity {
                     public void run() {
 
                         sDialog.dismiss();
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(ApplinkStr));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(sharedPreferences.getString(Shared_Preferences.link, "link")));
                         startActivity(browserIntent);
 
                     }
@@ -599,7 +599,7 @@ public class Preferences extends AppCompatActivity {
                     public void run() {
 
                         sDialog.dismiss();
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://firebasestorage.googleapis.com/v0/b/emmanuelkorircv.appspot.com/o/CV%20EMMANUEL%20KORIR%20(edited).pdf?alt=media&token=39412dda-c542-4e83-8053-8c84919b6f4a"));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Utils.downloadPdfUrl));
                         startActivity(browserIntent);
 
                     }
@@ -892,7 +892,7 @@ public class Preferences extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        QrcodeAppend();
+             QrcodeAppend();
 
     }
     //dark mode
@@ -921,10 +921,8 @@ public class Preferences extends AppCompatActivity {
 
                         userData.put(Shared_Preferences.link, ApplinkStr);
                         sharedPreferences.edit()
-                                .putString(Shared_Preferences.link,AppqrString)
+                                .putString(Shared_Preferences.link,ApplinkStr)
                                 .apply();
-
-
 
                         URLShortener.shortUrl(Objects.requireNonNull(map.get(Shared_Preferences.link)).toString(), new URLShortener.LoadingCallback() {
                             @Override
@@ -964,7 +962,7 @@ public class Preferences extends AppCompatActivity {
 
                         // setting this dimensions inside our qr code
                         // encoder to generate our qr code.
-                        qrgEncoder = new QRGEncoder(ApplinkStr, null, QRGContents.Type.TEXT, dimen);
+                        qrgEncoder = new QRGEncoder(sharedPreferences.getString(Shared_Preferences.link, "link"), null, QRGContents.Type.TEXT, dimen);
                         try {
                             // getting our qrcode in the form of bitmap.
                             bitmap = qrgEncoder.encodeAsBitmap();
