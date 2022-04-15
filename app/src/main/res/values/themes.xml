@@ -14,19 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.EmmanuelKorirCV.Fullscreen" parent="Theme.EmmanuelKorirCV">
-        <item name="android:actionBarStyle">
-            @style/Widget.Theme.EmmanuelKorirCV.ActionBar.Fullscreen
-        </item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-    </style>
-
-    <style name="ThemeOverlay.EmmanuelKorirCV.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">#747474</item>
-        <item name="fullscreenTextColor">@color/white</item>
-    </style>
-
     <style name="Theme.EmmanuelKorirCV.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -35,10 +22,6 @@
 
     <style name="Theme.EmmanuelKorirCV.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
-    <style name="Theme.EmmanuelKorirCV.AppBarOverlayDark" parent="Theme.EmmanuelKorirCV" />
-
-
 
     <style name="Theme.EmmanuelKorirCV.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="Theme.EmmanuelKorirCV.PopupOverlayDark" parent="Theme.EmmanuelKorirCV" />
 </resources>

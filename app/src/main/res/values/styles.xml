@@ -29,22 +29,6 @@
     </style>
 
 
-    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-
-        <item name="android:windowTranslucentStatus">false</item>
-    </style>
-    <style name="AppTheme.NoActionBarTransparent." parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">false</item>
-    </style>
-
     <style name="AppTheme.NoActionBarTransparentDark" parent="AppThemeDark">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/black</item>
@@ -53,33 +37,9 @@
         <item name="android:windowTranslucentStatus">false</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
-        <item name="colorPrimary">#000000</item>
-        <item name="colorPrimaryDark">#555555</item>
-        <item name="colorAccent">#FFFFFF</item>
 
-    </style>
-
-
-
-
-    <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="">
-        <item name="colorPrimary">#000000</item>
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">#FFFFFF</item>
-        <item name="android:windowTranslucentStatus">false</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
     <!-- Base application theme. -->
 
-
-
-    <style name="Match" parent="AppTheme">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -93,14 +53,6 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
-
-    <style name="AppThemeDark.NoActionBarTransparent">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-    </style>
-
 
 
     <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
@@ -175,20 +127,8 @@
     </style>
 
 
-
-
-
-
-    <style name="Widget.Theme.EmmanuelKorirCV.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-    <style name="Widget.Theme.EmmanuelKorirCV.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
-
     //sliding animation
+
     <style name="SlidingDialogAnimation">
         <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
         <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>

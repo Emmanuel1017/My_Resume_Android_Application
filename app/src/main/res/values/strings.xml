@@ -1,67 +1,20 @@
 <resources>
     <string name="app_name">Emmanuel (MY CV)</string>
 
-    <string name="full_name">Full Name</string>
-    <string name="age">Age</string>
     <string name="downloadAgain">download Again</string>
     <string name="downloadFailed">downloadFailed</string>
-    <string name="downloadStarted">download has Started</string>
     <string name="downloadCompleted">download Completed</string>
-    <string name="contact_number">Contact Number</string>
-    <string name="about_me">About Me</string>
-    <string name="description">Add your Bio</string>
-    <string name="save_changes">Save changes</string>
-    <string name="allow_call_from_others">Allow Call From Others</string>
-    <string name="profile_visibility">Profile Visibility</string>
-    <string name="post_description">Add text here or description</string>
-    <string name="post_image">Post Image</string>
-    <string name="send">send</string>
-    <string name="enter_message">Enter Message</string>
-    <string name="sex">sex</string>
-    <string name="about">About</string>
-    <string name="contact">contact</string>
-    <string name="call">Call</string>
-    <string name="message">message</string>
-    <string name="name">name</string>
-    <string name="plazzy99">EMMANUEL K KORIR</string>
     <string name="android_developer_java_competitive_programmer_loves_to_talk_on_tech">Bsc Computer science Software Engineering</string>
-    <string name="follow_me">Contact Me</string>
     <string name="linkedin">linkedin</string>
     <string name="github">github</string>
     <string name="twitter">twitter</string>
-    <string name="profile_cover">profile cover</string>
-    <string name="personal_info">Personal Info</string>
-    <string name="how_do_you_feel">Bio</string>
-    <string name="blocked_user">Blocked User</string>
-    <string name="block">Block</string>
-    <string name="send_mssg_button">send mssg button</string>
-    <string name="xx_xx_am">xx:xx am</string>
-    <string name="image">Image</string>
-    <string name="view_profile">View Profile</string>
-    <string name="deactivate_profile">Deactivate Profile</string>
-    <string name="posts">Posts</string>
-    <string name="add_some_friends_to_your_chat_list_from_the_cure_profiles">No Chats here, Click on a user in Fam tab to start a chat </string>
-    <string name="your_activity">Your Activity</string>
-    <string name="bio">Bio</string>
-    <string name="error_invalid_password">"Password is invalid "</string>
-    <string name="error_invalid_passwordsix">"Password should be atleast six characters or more "</string>
-    <string name="error_invalid_email">Invalid email</string>
-
-
 
 
     <string name="large_text">
       I am a Bsc Computer science graduate majoring in the field of Software Engineering. I had an interest in programming at an early age and take pride in software development and see it as an art form to design , code and deploy fully working softwares. I have a passion to learn new concepts and technological advancements and breakthroughs in the IT field.I do full stack android development ,Web development ,Software consultancy , Networking and computer Security and forensics consultancy which I learned a lot of programming languages over the years and do lots of projects to perfect my coding skills . I also participate in lots of online tech forums and communities to try providing solutions to tech related queries and sharing tech ideas and findings to further broaden my skills and knowledge base. I also engage my immediate community and help in solving tech related problems and provide viable solutions. I believe to have attained problem solving skills and resiliency to tackle any task thrown my way.
     </string>
-    <string name="title_activity_scrolling">Terms and conditions</string>
     <string name="call_me">Call Me</string>
-    <string name="title_activity_splash">Splash</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="my_cv">MY RESUME</string>
-    <string name="biography">I am a Bsc Computer science graduate majoring in the field of Software Engineering. I had an interest in programming at an early age and take pride in software development and see it as an art form to design , code and deploy fully working softwares. I have a passion to learn new concepts and technological advancements and breakthroughs in the IT field.I do full stack android development ,Web development ,Software consultancy , Networking and computer Security and forensics consultancy which I learned a lot of programming languages over the years and do lots of projects to perfect my coding skills . I also participate in lots of online tech forums and communities to try providing solutions to tech related queries and sharing tech ideas and findings to further broaden my skills and knowledge base. I also engage my immediate community and help in solving tech related problems and provide viable solutions. I believe to have attained problem solving skills and resiliency to tackle any task thrown my way.</string>
     <string name="title_activity_my_data">My_data</string>
-    <string name="action_settings">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
