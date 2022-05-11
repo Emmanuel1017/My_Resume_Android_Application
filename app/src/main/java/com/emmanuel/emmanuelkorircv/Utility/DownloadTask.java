@@ -56,8 +56,7 @@ public class DownloadTask {
 
 
     public boolean fileisFilePresent() {
-        String path = Environment.getExternalStorageDirectory() + "/"
-                + Utils.downloadDirectory+ "/" + downloadFileName;
+        String path = Environment.getExternalStorageDirectory() + "/" + Utils.downloadDirectory+ "/" + downloadFileName;
         File file = new File(path);
         return file.exists();
     }
@@ -70,9 +69,7 @@ public class DownloadTask {
         if (new CheckForSDCard().isSDCardPresent()) {
 
             //Get Download Directory File
-            File apkStorage = new File(
-                    Environment.getExternalStorageDirectory() + "/"
-                            + Utils.downloadDirectory);
+            File apkStorage = new File(Environment.getExternalStorageDirectory() + "/" + Utils.downloadDirectory);
 
             //If file is not present then display Toast
             if (apkStorage.exists()&&(fileisFilePresent() )) {
@@ -84,7 +81,7 @@ public class DownloadTask {
                 }else {
 
                     Intent intent = new Intent(context, File_viewer.class);
-                    ((Activity) context).startActivity(intent);
+                    context.startActivity(intent);
                 }
             }
             else if (apkStorage.exists() && (!fileisFilePresent() ))
@@ -203,7 +200,7 @@ public class DownloadTask {
                                     sDialog.dismissWithAnimation();
 
                                     Intent intent = new Intent(context, File_viewer.class);
-                                    ((Activity)context).startActivity(intent);
+                                    context.startActivity(intent);
                                 }
                             })
                             .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
