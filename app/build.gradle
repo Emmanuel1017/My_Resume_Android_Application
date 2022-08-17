@@ -96,11 +96,13 @@ dependencies {
 
 
     //firebase
-    implementation 'com.google.firebase:firebase-firestore:24.0.0'
-    implementation 'com.google.firebase:firebase-storage:20.0.0'
-    implementation 'com.google.firebase:firebase-database:20.0.2'
-    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation 'com.google.firebase:firebase-firestore:24.2.2'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.google.firebase:firebase-messaging:23.0.7'
 
+
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
 
     //SLIDER START
    // implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'

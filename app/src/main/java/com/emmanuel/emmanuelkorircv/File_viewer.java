@@ -2,7 +2,6 @@ package com.emmanuel.emmanuelkorircv;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -19,6 +18,10 @@ import java.io.File;
 public class File_viewer extends AppCompatActivity {
     private Toolbar toolbar;
     private LinearLayout ToolbArLAy;
+    private File dir_;
+
+    private String Download_File_Name = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class File_viewer extends AppCompatActivity {
             setTheme(R.style.AppTheme);
         }
 
+
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("MY RESUME");
         toolbar.setTitleTextColor(Color.WHITE);
@@ -59,20 +63,26 @@ public class File_viewer extends AppCompatActivity {
         PDFView pdfView=findViewById(R.id.pdfView);
 
 
-        String path = Environment.getExternalStorageDirectory() + "/"
-                + Utils.downloadDirectory+ "/" + Utils.downloadFileName;
+
+        dir_ = new File(getApplicationContext().getFilesDir(), Utils.downloadDirectory);
+        if(!dir_.exists()) {
+            dir_.mkdirs();
+        }
+
+        Download_File_Name = getIntent().getExtras().getString("File_Name","");
+
+
+        String path = dir_.getPath() + File.separator + Download_File_Name;
         File file = new File(path);
+
         if (file.exists())
         {
             Toast.makeText(File_viewer.this,"This is my resume located at "+path,Toast.LENGTH_LONG).show();
             pdfView.fromFile(file).load();
         }
-
-
-
-        else {
+        else
+        {
             Toast.makeText(File_viewer.this,"Pdf doesn't exist",Toast.LENGTH_SHORT).show();
-
             pdfView.fromAsset("CV EMMANUEL KORIR (edited).pdf").load();
         }
     }

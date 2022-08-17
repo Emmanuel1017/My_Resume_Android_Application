@@ -150,7 +150,7 @@ public class My_data extends AppCompatActivity {
         Arraymsgs.add("RUBY");
         Arraymsgs.add("Unity");
         Arraymsgs.add("React-native");
-        Arraymsgs.add("OpenCv/MTL");
+        Arraymsgs.add("OpenCv");
         Arraymsgs.add("CISCO");
         Arraymsgs.add("SSL");
         Arraymsgs.add("Daraja/Mpesa Api");
@@ -307,13 +307,13 @@ public class My_data extends AppCompatActivity {
 
 
 
+
         FloatingActionButton fab = binding.fab;
         Faba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                             checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
-
             }
         });
 
@@ -327,7 +327,6 @@ public class My_data extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
             }
         });
 
@@ -340,9 +339,6 @@ public class My_data extends AppCompatActivity {
                 // finish() here.
                 My_data.this.onBackPressed();
                 finish();
-
-
-
             }
         });
 
@@ -685,14 +681,11 @@ public class My_data extends AppCompatActivity {
     public void checkPermission(String permission, int requestCode)
     {
         if (ContextCompat.checkSelfPermission(My_data.this, permission) == PackageManager.PERMISSION_DENIED) {
-
             // Requesting the permission
             ActivityCompat.requestPermissions(My_data.this, new String[] { permission }, requestCode);
         }
         else {
-
             new DownloadTask(My_data.this, Faba, Utils.downloadPdfUrl);
-
         }
     }
 
@@ -701,13 +694,9 @@ public class My_data extends AppCompatActivity {
     // This request code is provided when the user is prompt for permission.
 
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String[] permissions,
-                                           @NonNull int[] grantResults)
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
     {
-        super.onRequestPermissionsResult(requestCode,
-                permissions,
-                grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
     if (requestCode == STORAGE_PERMISSION_CODE) {
             if (grantResults.length > 0

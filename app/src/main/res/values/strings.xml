@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Emmanuel (MY CV)</string>
 
-    <string name="downloadAgain">download Again</string>
+    <string name="downloadAgain">try to download Again</string>
     <string name="downloadFailed">downloadFailed</string>
     <string name="downloadCompleted">download Completed</string>
     <string name="android_developer_java_competitive_programmer_loves_to_talk_on_tech">Bsc Computer science Software Engineering</string>
@@ -16,5 +16,4 @@
     <string name="call_me">Call Me</string>
     <string name="my_cv">MY RESUME</string>
     <string name="title_activity_my_data">My_data</string>
-    <!-- TODO: Remove or change this placeholder text -->
 </resources>
