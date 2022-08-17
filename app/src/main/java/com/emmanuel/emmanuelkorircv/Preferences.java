@@ -32,7 +32,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
@@ -60,7 +59,7 @@ import com.emmanuel.emmanuelkorircv.Utility.CheckForSDCard;
 import com.emmanuel.emmanuelkorircv.Utility.DownloadTask;
 import com.emmanuel.emmanuelkorircv.Utility.MyApplication;
 import com.emmanuel.emmanuelkorircv.Utility.Shared_Preferences;
-import com.emmanuel.emmanuelkorircv.Utility.SnackBarHelper;
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper;
 import com.emmanuel.emmanuelkorircv.Utility.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -119,6 +118,7 @@ public class Preferences extends AppCompatActivity {
     private TextView InternalStorageText,ExternalStorageText,RAMText,StorageLabel,DayNigtText1,DayNightText2;
 
 
+    private File dir_;
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -143,7 +143,7 @@ public class Preferences extends AppCompatActivity {
         Con= findViewById(R.id.online_dot);
         Discon=findViewById(R.id.offline_dot);
         Back=findViewById(R.id.back_button_preferences);
-        internetStatus = (TextView) findViewById(R.id.internet_status);
+        internetStatus = findViewById(R.id.internet_status);
         Share=findViewById(R.id.Shareapk);
         ShareCard=findViewById(R.id.Share_card);
         Sharelink=findViewById(R.id.Sharelink);
@@ -249,21 +249,21 @@ public class Preferences extends AppCompatActivity {
         // If the night mode is correct by default, it sets the Night Mode theme.
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
             setTheme(R.style.NoActionBar);
-            LinearLayout layout =(LinearLayout) findViewById(R.id.layout_info_card);
+            LinearLayout layout = findViewById(R.id.layout_info_card);
             layout.setBackgroundResource(R.drawable.gradient_card_dark);
-            LinearLayout layout1 =(LinearLayout) findViewById(R.id.layout_info_card1);
+            LinearLayout layout1 = findViewById(R.id.layout_info_card1);
             layout1.setBackgroundResource(R.drawable.gradient_card_dark);
-            LinearLayout layout2 =(LinearLayout) findViewById(R.id.layout_info_card2);
+            LinearLayout layout2 = findViewById(R.id.layout_info_card2);
             layout2.setBackgroundResource(R.drawable.gradient_card_dark);
-            LinearLayout layout3 =(LinearLayout) findViewById(R.id.layout_info_card3);
+            LinearLayout layout3 = findViewById(R.id.layout_info_card3);
             layout3.setBackgroundResource(R.drawable.gradient_card_dark);
             Drawable res = getResources().getDrawable(R.drawable.ic_baseline_arrow_back_white);
             Back.setImageDrawable(res);
-            LinearLayout layout4 =(LinearLayout) findViewById(R.id.layout_info_card4);
+            LinearLayout layout4 = findViewById(R.id.layout_info_card4);
             layout4.setBackgroundResource(R.drawable.gradient_card_dark);
-            LinearLayout layout5 =(LinearLayout) findViewById(R.id.layout_info_card5);
+            LinearLayout layout5 = findViewById(R.id.layout_info_card5);
             layout5.setBackgroundResource(R.drawable.gradient_card_dark);
-            ConstraintLayout layoutmain =(ConstraintLayout) findViewById(R.id.background_layout);
+            ConstraintLayout layoutmain = findViewById(R.id.background_layout);
             layoutmain.setBackgroundColor(Color.parseColor("#4E4E4E"));
             WebLInk.setTextColor(Color.parseColor("#FFFFFF"));
             AppLink.setTextColor(Color.parseColor("#FFFFFF"));
@@ -376,7 +376,7 @@ public class Preferences extends AppCompatActivity {
         }
         //night mode end
 
-        iconSwitch = (IconSwitch) findViewById(R.id.iconSwitchDarkLight);
+        iconSwitch = findViewById(R.id.iconSwitchDarkLight);
 
 
         //If NightMode is active, the Switch is on right side. Enabled to be active
@@ -453,7 +453,7 @@ public class Preferences extends AppCompatActivity {
 
 
 
-
+        dir_ = new File(getApplicationContext().getFilesDir(), Utils.downloadDirectory);
 
 
 
@@ -617,7 +617,7 @@ public class Preferences extends AppCompatActivity {
         String arch = System.getProperty("os.arch");
 //        Log.v("Scan Class", getDeviceName());
 //        Toast.makeText(this, getDeviceName(), Toast.LENGTH_SHORT).show();
-        TextView tv = (TextView) findViewById(R.id.quantity_text);
+        TextView tv = findViewById(R.id.quantity_text);
 
         try {
         tv.setText("******DEVICE Information ******" + "\n");
@@ -737,7 +737,7 @@ public class Preferences extends AppCompatActivity {
                     float totalMemory = memInfo.totalMem;
                     float availMemory = memInfo.availMem;
                     float usedMemory = totalMemory - availMemory;
-                    float perecentlong = (float) ((usedMemory / totalMemory)*100);
+                    float perecentlong = (usedMemory / totalMemory)*100;
 
                     FloatViewRAM.setProgress(perecentlong,true);
                     RAMProgressview.setProgress(perecentlong);
@@ -747,7 +747,7 @@ public class Preferences extends AppCompatActivity {
                  //Toast.makeText(Preferences.this, calThermalsCount()+"",Toast.LENGTH_SHORT).show();
 
                     float usedinternalstorage = (float)(getTotalInternalMemorySize()-getAvailableInternalMemorySize());
-                    float Storageinternal = (float)(usedinternalstorage/getTotalInternalMemorySize()*100);
+                    float Storageinternal = usedinternalstorage/getTotalInternalMemorySize()*100;
 
                     //Toast.makeText(Preferences.this, getTotalInternalMemorySize()+"",Toast.LENGTH_SHORT).show();
 
@@ -759,7 +759,7 @@ public class Preferences extends AppCompatActivity {
                     if(externalMemoryAvailable())
                     {
                         float usedexternalstorage = (float)(getTotalExternalMemorySize()-getAvailableExternalMemorySize());
-                        float Storageexternal = (float)(usedexternalstorage/getTotalExternalMemorySize()*100);
+                        float Storageexternal = usedexternalstorage/getTotalExternalMemorySize()*100;
                         ExternalStorage.setProgress(Storageexternal);
                         ExternalStorageText.setText("Size: "+formatSize(getTotalExternalMemorySize())+"  used: "+formatSize(getTotalExternalMemorySize()-getAvailableExternalMemorySize())+"   Free: "+formatSize(getAvailableExternalMemorySize()));
 
@@ -1024,8 +1024,7 @@ public class Preferences extends AppCompatActivity {
 
 
     public boolean fileisFilePresent() {
-        String path = Environment.getExternalStorageDirectory() + "/"
-                + Utils.downloadDirectory+ "/" + Utils .downloadFileName;
+        String path = dir_.getPath()+File.separator+ Utils.downloadFileName;
         File file = new File(path);
         return file.exists();
     }
@@ -1043,9 +1042,8 @@ public class Preferences extends AppCompatActivity {
 
 
         // Make sure you put example png image named myImage.png in your
-        // directory
-        String path = Environment.getExternalStorageDirectory() + "/"
-                + Utils.downloadDirectory + "/" + Utils.downloadFileName;
+
+        String path = dir_.getPath() + File.separator + Utils.downloadFileName;
 
         //workaround beyond exposed uri fixes uri exposed yeah:-)
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -1103,12 +1101,7 @@ public class Preferences extends AppCompatActivity {
             ActivityCompat.requestPermissions(Preferences.this, new String[] { permission }, requestCode);
         }
         else {
-
-
-            new DownloadTask(Preferences.this, Float, Utils.downloadPdfUrl);
-
-
-
+            new DownloadTask(Preferences.this, Utils.downloadPdfUrl);
 
         }
     }
@@ -1130,12 +1123,12 @@ public class Preferences extends AppCompatActivity {
             if (grantResults.length > 0
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(Preferences.this, "Storage Permission Granted", Toast.LENGTH_SHORT).show();
-                new DownloadTask(Preferences.this ,Float, Utils.downloadPdfUrl);
+                new DownloadTask(Preferences.this , Utils.downloadPdfUrl);
 
             } else {
                 final SweetAlertDialog CC = new SweetAlertDialog(Preferences.this, SweetAlertDialog.WARNING_TYPE);
                 CC.setTitleText("Storage Permission Denied");
-                CC.setContentText("Cannot Access my CV without granting storage permission! Plase allow Storage permission to continue! If you keep seeing this go to settings application manager then permissions and grant this application permission for storage");
+                CC.setContentText("pleas grant storage permission first! Plase allow Storage permission to continue! If you keep seeing this go to settings application manager then permissions and grant this application permission for storage");
                 CC.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
                 CC.setCancelable(false);
                 CC.show();
@@ -1298,7 +1291,7 @@ public class Preferences extends AppCompatActivity {
         MyApplication.activityResumed();// On Resume notify the Application
 
 
-        internetStatus = (TextView) findViewById(R.id.internet_status);
+        internetStatus = findViewById(R.id.internet_status);
         // At activity startup we manually check the internet status and change
         // the text status
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);

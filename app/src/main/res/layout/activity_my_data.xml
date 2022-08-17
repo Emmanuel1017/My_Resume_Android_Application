@@ -43,10 +43,11 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
+                android:elevation="-10dp"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.EmmanuelKorirCV.PopupOverlay"
-                />
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1.7"
+                app:popupTheme="@style/Theme.EmmanuelKorirCV.AppBarOverlay" />
 
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -57,11 +58,13 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="1.7"
-                android:src="@drawable/emmanul_me" />
+                android:src="@drawable/emmanuel_me" />
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -75,7 +78,8 @@
         app:layout_collapseMode="pin"
         app:layout_anchorGravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-         />
+        />
+
 
 
     <include layout="@layout/content_scrolling" />

@@ -1,4 +1,4 @@
-package com.emmanuel.emmanuelkorircv.Utility;
+package com.emmanuel.emmanuelkorircv.Utility.Snackbar;
 
 import static com.google.android.material.internal.ViewUtils.dpToPx;
 
@@ -20,6 +20,7 @@ import androidx.core.view.ViewCompat;
 import com.emmanuel.emmanuelkorircv.R;
 import com.google.android.material.snackbar.Snackbar;
 
+
 public class SnackBarHelper_Error {
     public static void configSnackbar(Context context, Snackbar snack) {
         addMargins(snack);
@@ -35,7 +36,7 @@ public class SnackBarHelper_Error {
         ViewCompat.setLayoutDirection(snackbar.getView(),        ViewCompat.LAYOUT_DIRECTION_RTL);
         //center snackbar
         View view = snackbar.getView();
-        TextView txtv = (TextView) view.findViewById(com.google.android.material.R.id.snackbar_text);
+        TextView txtv = view.findViewById(com.google.android.material.R.id.snackbar_text);
         txtv.setGravity(Gravity.CENTER_HORIZONTAL);
         txtv.setPadding(0,0,0,0);
 
@@ -47,7 +48,7 @@ public class SnackBarHelper_Error {
 
         //center snackbar
         View view = snackbar.getView();
-        TextView txtv = (TextView) view.findViewById(com.google.android.material.R.id.snackbar_text);
+        TextView txtv = view.findViewById(com.google.android.material.R.id.snackbar_text);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             txtv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         }else {
@@ -57,7 +58,7 @@ public class SnackBarHelper_Error {
     }
     //text color
     private static void changeActionTextColor(Snackbar snackbar , Context context) {
-        snackbar.setActionTextColor(context.getResources().getColor(R.color.colorWhite));
+        snackbar.setActionTextColor(context.getResources().getColor(R.color.white));
 
     }
     private static void addMargins(Snackbar snack) {

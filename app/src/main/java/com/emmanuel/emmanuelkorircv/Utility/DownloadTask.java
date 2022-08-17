@@ -31,13 +31,14 @@ public class DownloadTask {
     private final String getDownloadDiretory = "";
     private final SweetAlertDialog pDialog;
     private final File dir_;
+    FloatingActionButton Faba ;
 
     public DownloadTask(Context context, FloatingActionButton buttonText, String downloadUrl) {
         this.context = context;
         this.downloadUrl = downloadUrl;
         pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
-        downloadFileName = downloadUrl.replace(Utils.mainUrl, "").replace(Utils.mainUrltoken, "").replace("%20", "");//Create file name by picking download file name from URL;
-
+        downloadFileName = downloadUrl.replace(Utils.mainUrl, "").replace("%20", "");//Create file name by picking download file name from URL;
+        this.Faba = buttonText;
         Log.e(TAG, downloadFileName);
 
         //create a new directory since in api 30+ Environment.getExternalStorageDirectory() is depcracated
@@ -48,6 +49,25 @@ public class DownloadTask {
             dir_.mkdirs();
         }
        // Toast.makeText(context,dir_.getPath(),Toast.LENGTH_LONG+1000000).show();
+        //Start Downloading Task
+        checkforDownloadedFolder();
+    }
+
+    public DownloadTask(Context context,  String downloadUrl) {
+        this.context = context;
+        this.downloadUrl = downloadUrl;
+        pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
+        downloadFileName = downloadUrl.replace(Utils.mainUrl, "").replace("%20", "");//Create file name by picking download file name from URL;
+        Log.e(TAG, downloadFileName);
+
+        //create a new directory since in api 30+ Environment.getExternalStorageDirectory() is depcracated
+
+        //make download dir if not existing
+        dir_ = new File(context.getFilesDir(), Utils.downloadDirectory);
+        if(!dir_.exists()) {
+            dir_.mkdirs();
+        }
+        // Toast.makeText(context,dir_.getPath(),Toast.LENGTH_LONG+1000000).show();
         //Start Downloading Task
         checkforDownloadedFolder();
     }
@@ -83,7 +103,12 @@ public class DownloadTask {
          }
         }else
         {
-            Toast.makeText(context,"No connection",Toast.LENGTH_SHORT).show();
+            if(fileisFilePresent())
+            {
+                intentPdf();
+            }else {
+                Toast.makeText(context, "Internet connection needed to fetch the document", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

@@ -1,4 +1,29 @@
 <resources>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="margin_dp">15dp</dimen>
+    <dimen name="progress_h_w">40dp</dimen>
+    <dimen name="circle_progress">35dp</dimen>
+    <dimen name="default_text_size">16sp</dimen>
+
+    <dimen name="img_height">155dp</dimen>
+
+    <dimen name="small_text">10sp</dimen>
+    <dimen name="mid_text">15sp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="textsize_34">34sp</dimen>
+    <dimen name="textsize_18">18sp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="txtsize_22">22sp</dimen>
+    <dimen name="txt_size_16">16sp</dimen>
+    <dimen name="txtsize_18">18sp</dimen>
+    <dimen name="txt_size_20">20sp</dimen>
+    <dimen name="text_12sp">12sp</dimen>
 </resources>

@@ -1,4 +1,4 @@
-package com.emmanuel.emmanuelkorircv.Utility;
+package com.emmanuel.emmanuelkorircv.Utility.Snackbar;
 
 import static com.google.android.material.internal.ViewUtils.dpToPx;
 
@@ -13,6 +13,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.core.view.ViewCompat;
@@ -29,13 +31,14 @@ public class SnackBarHelper {
         ViewCompat.setElevation(snack.getView(), 6f);
         changeActionTextColor(snack , context);
         animate(snack,context);
+        enter_animation(snack,context);
     }
     //layout direction
     private static void setToRtl(Snackbar snackbar) {
         ViewCompat.setLayoutDirection(snackbar.getView(),        ViewCompat.LAYOUT_DIRECTION_RTL);
         //center snackbar
         View view = snackbar.getView();
-        TextView txtv = (TextView) view.findViewById(com.google.android.material.R.id.snackbar_text);
+        TextView txtv = view.findViewById(com.google.android.material.R.id.snackbar_text);
         txtv.setGravity(Gravity.CENTER_HORIZONTAL);
         txtv.setPadding(0,0,0,0);
 
@@ -47,7 +50,7 @@ public class SnackBarHelper {
 
         //center snackbar
         View view = snackbar.getView();
-        TextView txtv = (TextView) view.findViewById(com.google.android.material.R.id.snackbar_text);
+        TextView txtv = view.findViewById(com.google.android.material.R.id.snackbar_text);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             txtv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         }else {
@@ -57,7 +60,7 @@ public class SnackBarHelper {
     }
     //text color
     private static void changeActionTextColor(Snackbar snackbar , Context context) {
-        snackbar.setActionTextColor(context.getResources().getColor(R.color.colorWhite));
+        snackbar.setActionTextColor(context.getResources().getColor(R.color.white));
 
     }
     private static void addMargins(Snackbar snack) {
@@ -68,7 +71,7 @@ public class SnackBarHelper {
     //drawable
     private static void setRoundBordersBg(Context context, Snackbar snackbar) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            snackbar.getView().setBackground(context.getDrawable(R.drawable.gradient_main));
+            snackbar.getView().setBackground(context.getDrawable(R.drawable.gradient_snack));
         }
     }
     private static void setTypeFace(Context context, Snackbar snackbar) {
@@ -79,6 +82,14 @@ public class SnackBarHelper {
         Typeface bold = Typeface.DEFAULT_BOLD;
         tv.setTypeface(font);
         snackbarActionTextView.setTypeface(bold);
+    }
+
+    private static void enter_animation(Snackbar snackbar , Context context)
+    {
+        View snackbarLayout = snackbar.getView();
+        final Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.slide_in_from_left);
+        snackbarLayout.startAnimation(myAnim);
+
     }
 
     //keyboard helper to make snackbar go above it

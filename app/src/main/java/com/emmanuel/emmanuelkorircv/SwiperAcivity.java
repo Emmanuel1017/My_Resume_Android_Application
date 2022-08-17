@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.emmanuel.emmanuelkorircv.Utility.SnackBarHelper;
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper;
 import com.emmanuel.emmanuelkorircv.listeners.PaperOnboardingOnChangeListener;
 import com.emmanuel.emmanuelkorircv.listeners.PaperOnboardingOnRightOutListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -113,7 +113,7 @@ public class SwiperAcivity extends AppCompatActivity {
         PaperOnboardingPage scr1 = new PaperOnboardingPage("Hello", "I am a full Stack developer majoring in Software Development with BSC Computer Science",
                 Color.parseColor("#c6ffb3"), R.drawable.dragon, R.drawable.ic_key);
         PaperOnboardingPage scr2 = new PaperOnboardingPage("About Me", "I am a software engineer with skills to create and deploy Solutions by creating working softwares and offer software consultany serivices.More can be viewed in my resume Application.",
-                Color.parseColor("#b3ffff"), R.drawable.emmanul_me, R.drawable.ic_programmer);
+                Color.parseColor("#b3ffff"), R.drawable.emmanuel_me, R.drawable.ic_programmer);
         PaperOnboardingPage scr3 = new PaperOnboardingPage("About App", "This is a sample application to showcase Android Development platform capabilities with some of the latest trends in modern development with a standard UI developed and maintained by me.It also highlights my Resume details.",
                 Color.parseColor("#6685EB"), R.drawable.android_robot, R.drawable.ic_android);
 

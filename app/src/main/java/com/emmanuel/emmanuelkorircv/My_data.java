@@ -36,7 +36,7 @@ import androidx.core.content.ContextCompat;
 
 import com.emmanuel.emmanuelkorircv.Utility.CheckForSDCard;
 import com.emmanuel.emmanuelkorircv.Utility.DownloadTask;
-import com.emmanuel.emmanuelkorircv.Utility.SnackBarHelper;
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper;
 import com.emmanuel.emmanuelkorircv.Utility.Utils;
 import com.emmanuel.emmanuelkorircv.databinding.ActivityMyDataBinding;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -198,7 +198,7 @@ public class My_data extends AppCompatActivity {
 
 
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle("       My Resume");
+        toolBarLayout.setTitle("           My Resume");
 
 
 

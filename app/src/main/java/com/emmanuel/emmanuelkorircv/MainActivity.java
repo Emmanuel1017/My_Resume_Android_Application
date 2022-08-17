@@ -21,13 +21,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
@@ -44,6 +42,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class MainActivity extends AppCompatActivity {
     private ImageView Back ,Me;
@@ -51,13 +51,12 @@ public class MainActivity extends AppCompatActivity {
     private Map<String ,Object> userData;
     private SharedPreferences sharedPreferences;
     private View TopHeader;
-    private ImageView Photo;
+    private CircleImageView Photo;
     private LinearLayout LinLay1,LinLay2,LinLay3,LinLay4,LinLay5,LinLay6;
     private HTextView Name;
     private  Runnable runnableCode ;
     private  PowerMenu powerMenu;
     private ImageView Settings;
-    private ImageView MeImg,ExperiencesImg,Contactimg,OtherImg,Preferencesimg,Exitimg;
     private CardView Contact,Experiences,Personal_data,My_documents,Preferences,Exit;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("ResourceAsColor")
@@ -92,12 +91,6 @@ public class MainActivity extends AppCompatActivity {
         LinLay6=findViewById(R.id.Linear_main6);
         Photo=findViewById(R.id.user_photo);
 
-        MeImg=findViewById(R.id.image_view_Me);
-        ExperiencesImg=findViewById(R.id.image_view_Experiences);
-        Contactimg=findViewById(R.id.image_view_Contact);
-        OtherImg=findViewById(R.id.image_view_Other);
-        Preferencesimg=findViewById(R.id.image_view_Prefernces);
-        Exitimg=findViewById(R.id.Image_View_Exit);
 
 
 
@@ -116,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
         //using two to changE theme with this one and the other to change backgrounds for layouts
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
-            ConstraintLayout layoutmain =(ConstraintLayout) findViewById(R.id.layout_mainativity);
+            LinearLayout layoutmain = findViewById(R.id.layout_mainativity);
             layoutmain.setBackgroundColor(Color.parseColor("#4E4E4E"));
             TopHeader.setBackgroundResource(R.drawable.ic_bg_topheader_dark);
             LinLay1.setBackgroundResource(R.drawable.gradient_card_dark);
@@ -125,66 +118,21 @@ public class MainActivity extends AppCompatActivity {
             LinLay4.setBackgroundResource(R.drawable.gradient_card_dark);
             LinLay5.setBackgroundResource(R.drawable.gradient_card_dark);
             LinLay6.setBackgroundResource(R.drawable.gradient_card_dark);
-            Drawable res = getResources().getDrawable(R.drawable.caribou_logo_dark);
+            Drawable res = getResources().getDrawable(R.drawable.emmanuel_me);
 
             Photo.setImageDrawable(res);
 
             Back.setImageDrawable(getDrawable(R.drawable.ic_baseline_arrow_back_white));
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.boy_dark)
-                    .into(MeImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.experiences_dark)
-                    .into(ExperiencesImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.mobile_dark)
-
-                    .into(Contactimg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.paint_dark)
-
-                    .into(OtherImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.setting_dark)
-
-                    .into(Preferencesimg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.back_dark)
-
-                    .into(Exitimg);
 
             Glide.with(MainActivity.this)
                     .load(R.drawable.setting_dark)
                     .into(Settings);
         }else{
-            Drawable resn = getResources().getDrawable(R.drawable.caribou_logo);
+            Drawable resn = getResources().getDrawable(R.drawable.emmanuel_me);
             Photo.setImageDrawable(resn);
 
             Glide.with(MainActivity.this)
-                    .load(R.drawable.boy)
-                    .into(MeImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.experiences)
-                    .into(ExperiencesImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.mobile)
-
-                    .into(Contactimg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.paint)
-
-                    .into(OtherImg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.settings)
-
-                    .into(Preferencesimg);
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.back)
-
-                    .into(Exitimg);
-
-            Glide.with(MainActivity.this)
-                    .load(R.drawable.settings)
+                    .load(R.drawable.preferences)
                     .into(Settings);
         }
 
@@ -210,15 +158,45 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void run() {
-                        Name.animateText("Caribou Developers");
+                        Name.animateText("I am a software engineer");
                     }
                 }, 6000);
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Name.animateText("I am a android developer");
+                    }
+                }, 9000);
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Name.animateText("I am a web developer");
+                    }
+                }, 12000);
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Name.animateText("I am a ui/ux designer");
+                    }
+                }, 15000);
+
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Name.animateText("I am a .NET Developer");
+                    }
+                }, 18000);
+
 
 
                 Log.d("Handlers", "Called on Typing Animation");
                 // Repeat this the same runnable code block again another 6 seconds
                 // 'this' is referencing the Runnable object
-                handler.postDelayed(this, 6000);
+                handler.postDelayed(this, 20000);
             }
         };
 // Start the initial runnable task by posting through the handler
@@ -268,8 +246,6 @@ public class MainActivity extends AppCompatActivity {
         Personal_data.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                TextView Ptext = (TextView) findViewById(R.id.personal_data_text);
-                Ptext.setTextColor(getResources().getColor(R.color.colorWhite));
 
                 return false;
             }
@@ -495,7 +471,7 @@ public class MainActivity extends AppCompatActivity {
         {
             powerMenu = new PowerMenu.Builder(MainActivity.this)
                     // .addItemList(list) //
-                    .addItem(new PowerMenuItem("Preferences", R.drawable.settings))
+                    .addItem(new PowerMenuItem("Preferences", R.drawable.preferences))
                     .addItem(new PowerMenuItem("Exit", R.drawable.back)) // aad an item list.
                     .setAnimation(MenuAnimation.DROP_DOWN) // Animation start point (TOP | LEFT)
                     .setIconSize(24)
