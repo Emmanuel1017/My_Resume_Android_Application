@@ -205,9 +205,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Emmanuel_BE_Cool  - koriremmanuel@rocketmail.com
+Emmanuel_Be_Cool  - koriremmanuel@rocketmail.com
 
-Project Link: [https://github.com/Emmanuel1017/Angular-Resume/](https://github.com/Emmanuel1017/Angular-Resume)
+My Link: [emmanuel.cariboudevs.com](https://emmanuel.cariboudevs.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
