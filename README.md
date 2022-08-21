@@ -121,11 +121,8 @@ To fork this project use the following in vscode cli:
 
 ### Prerequisites
 
-You need npm to run the cli commands 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You need android studio and buildtools 31.0.0 sdk for easier build.
+
 
 ### Installation
 
