@@ -133,7 +133,7 @@ You need android studio and buildtools 31.0.0 sdk for easier build.
 1. This project requires android studio
 2. Clone the repo
    ```sh
-   git clone https://github.com/Emmanuel1017/My_Resume_Android_Applicatio.git
+   git clone https://github.com/Emmanuel1017/My_Resume_Android_Application.git
    ```
 3. get all gradle dependencies 
 
@@ -157,10 +157,13 @@ You need android studio and buildtools 31.0.0 sdk for easier build.
 ## Roadmap
 
 - [x] Add Changelog
-- [x] Add mobile Admin panel                                       
-- [ ] Add php laravel admin panel
-- [ ] Add more angularcomponens
-- [ ] Add live chat api
+- [x] Add resume document with a inbuilt pdf viewer  
+- [x] Add day and night mode   
+- [ ] Add color themes
+- [ ] Add transformation transition animation util between activites and objects
+- [ ] Add Json api link to website
+- [ ] Add firebase realtime db for contact form messege delivery                                   
+
 
 
 See the [open issues](https://github.com/Emmanuel1017/Angular-Resume//issues) for a full list of proposed features (and known issues).
