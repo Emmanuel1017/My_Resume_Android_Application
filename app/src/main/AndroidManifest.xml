@@ -49,9 +49,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splash"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="true"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:hardwareAccelerated="true"
+            android:screenOrientation="fullSensor"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.NoActionBarTransparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
