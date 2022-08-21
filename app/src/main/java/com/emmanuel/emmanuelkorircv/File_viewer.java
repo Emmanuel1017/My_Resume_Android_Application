@@ -1,26 +1,31 @@
 package com.emmanuel.emmanuelkorircv;
 
-import android.graphics.Color;
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
 
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper;
 import com.emmanuel.emmanuelkorircv.Utility.Utils;
 import com.github.barteksc.pdfviewer.PDFView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 
 public class File_viewer extends AppCompatActivity {
-    private Toolbar toolbar;
     private LinearLayout ToolbArLAy;
     private File dir_;
 
     private String Download_File_Name = "";
+    private ImageView Back;
+
+    private final Activity activity = File_viewer.this;
+    private final Context context = File_viewer.this;
 
 
     @Override
@@ -28,47 +33,35 @@ public class File_viewer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //using two to chang theme with this one and the other to change backgrounds for layouts
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
-            setTheme(R.style.NoActionBar);
+            setTheme(R.style.AppTheme_NoActionBarTransparent);
         }else{
-            setTheme(R.style.AppTheme);
+            setTheme(R.style.AppTheme_NoActionBarTransparent);
         }
 
         setContentView(R.layout.activity_file_viewer);
-        ToolbArLAy=findViewById(R.id.Layout_custom_toolbar);
-
-        //using two to chang theme with this one and the other to change backgrounds for layouts
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
-            ToolbArLAy.setBackgroundResource(R.drawable.gradient_main_dark);
-        }else{
-            setTheme(R.style.AppTheme);
-        }
 
 
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("MY RESUME");
-        toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_baseline_arrow_back_white));
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+
+
+        PDFView pdfView=findViewById(R.id.pdfView);
+        Back = findViewById(R.id.back_pdf_viewer);
+
+
+        Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //What to do on back clicked
-                // finish() here.
                 File_viewer.this.onBackPressed();
                 finish();
-
-
             }
         });
-        PDFView pdfView=findViewById(R.id.pdfView);
-
-
 
         dir_ = new File(getApplicationContext().getFilesDir(), Utils.downloadDirectory);
         if(!dir_.exists()) {
             dir_.mkdirs();
         }
 
+        //get intent
         Download_File_Name = getIntent().getExtras().getString("File_Name","");
 
 
@@ -77,12 +70,16 @@ public class File_viewer extends AppCompatActivity {
 
         if (file.exists())
         {
-            Toast.makeText(File_viewer.this,"This is my resume located at "+path,Toast.LENGTH_LONG).show();
+            Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"This is my Latest Updated CV",      Snackbar.LENGTH_SHORT);
+            SnackBarHelper.configSnackbar(context, snack);
+            snack.show();
             pdfView.fromFile(file).load();
         }
         else
         {
-            Toast.makeText(File_viewer.this,"Pdf doesn't exist",Toast.LENGTH_SHORT).show();
+            Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"This is a old Resume, Activate data to view my latest resume",      Snackbar.LENGTH_SHORT);
+            SnackBarHelper.configSnackbar(context, snack);
+            snack.show();
             pdfView.fromAsset("CV EMMANUEL KORIR (edited).pdf").load();
         }
     }

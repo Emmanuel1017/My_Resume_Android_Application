@@ -8,6 +8,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -22,6 +23,7 @@ import androidx.core.view.ViewCompat;
 import com.emmanuel.emmanuelkorircv.R;
 import com.google.android.material.snackbar.Snackbar;
 
+
 public class SnackBarHelper {
     public static void configSnackbar(Context context, Snackbar snack) {
         addMargins(snack);
@@ -30,12 +32,25 @@ public class SnackBarHelper {
         setToRtl(snack);
         ViewCompat.setElevation(snack.getView(), 6f);
         changeActionTextColor(snack , context);
-        animate(snack,context);
+        style(snack,context);
         enter_animation(snack,context);
+
+
+            //delay exit animation
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    exit_animation(snack, context);
+                }
+            }, 1400);
+
+
     }
     //layout direction
     private static void setToRtl(Snackbar snackbar) {
-        ViewCompat.setLayoutDirection(snackbar.getView(),        ViewCompat.LAYOUT_DIRECTION_RTL);
+        ViewCompat.setLayoutDirection(snackbar.getView(), ViewCompat.LAYOUT_DIRECTION_RTL);
         //center snackbar
         View view = snackbar.getView();
         TextView txtv = view.findViewById(com.google.android.material.R.id.snackbar_text);
@@ -46,7 +61,7 @@ public class SnackBarHelper {
 
     }
     //text color
-    private static void animate(Snackbar snackbar , Context context) {
+    private static void style(Snackbar snackbar , Context context) {
 
         //center snackbar
         View view = snackbar.getView();
@@ -88,6 +103,13 @@ public class SnackBarHelper {
     {
         View snackbarLayout = snackbar.getView();
         final Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.slide_in_from_left);
+        snackbarLayout.startAnimation(myAnim);
+
+    }
+    private static void exit_animation(Snackbar snackbar , Context context)
+    {
+        View snackbarLayout = snackbar.getView();
+        final Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.slide_out_from_left);
         snackbarLayout.startAnimation(myAnim);
 
     }

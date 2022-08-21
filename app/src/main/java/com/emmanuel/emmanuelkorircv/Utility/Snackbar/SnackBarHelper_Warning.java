@@ -8,11 +8,14 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.core.view.ViewCompat;
@@ -29,6 +32,18 @@ public class SnackBarHelper_Warning {
         ViewCompat.setElevation(snack.getView(), 6f);
         changeActionTextColor(snack , context);
         animate(snack,context);
+        enter_animation(snack,context);
+
+
+        //delay exit animation
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                exit_animation(snack, context);
+            }
+        }, 1400);
     }
     //layout direction
     private static void setToRtl(Snackbar snackbar) {
@@ -79,6 +94,21 @@ public class SnackBarHelper_Warning {
         Typeface bold = Typeface.DEFAULT_BOLD;
         tv.setTypeface(font);
         snackbarActionTextView.setTypeface(bold);
+    }
+
+    private static void enter_animation(Snackbar snackbar , Context context)
+    {
+        View snackbarLayout = snackbar.getView();
+        final Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.slide_in_from_left);
+        snackbarLayout.startAnimation(myAnim);
+
+    }
+    private static void exit_animation(Snackbar snackbar , Context context)
+    {
+        View snackbarLayout = snackbar.getView();
+        final Animation myAnim = AnimationUtils.loadAnimation(context, R.anim.slide_out_from_left);
+        snackbarLayout.startAnimation(myAnim);
+
     }
 
     //keyboard helper to make snackbar go above it

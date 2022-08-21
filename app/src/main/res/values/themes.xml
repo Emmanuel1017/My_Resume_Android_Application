@@ -14,14 +14,5 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.EmmanuelKorirCV.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
 
-    </style>
-
-    <style name="Theme.EmmanuelKorirCV.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-
-
-    <style name="Theme.EmmanuelKorirCV.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

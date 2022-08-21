@@ -1,11 +1,12 @@
 package com.emmanuel.emmanuelkorircv.Utility;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
 
 import com.downloader.Error;
 import com.downloader.OnCancelListener;
@@ -16,7 +17,11 @@ import com.downloader.OnStartOrResumeListener;
 import com.downloader.PRDownloader;
 import com.downloader.Progress;
 import com.emmanuel.emmanuelkorircv.File_viewer;
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper;
+import com.emmanuel.emmanuelkorircv.Utility.Snackbar.SnackBarHelper_Error;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.skydoves.progressview.ProgressView;
 
 import java.io.File;
 
@@ -31,14 +36,18 @@ public class DownloadTask {
     private final String getDownloadDiretory = "";
     private final SweetAlertDialog pDialog;
     private final File dir_;
+    private ProgressView progressView;
     FloatingActionButton Faba ;
+    Activity activity ;
 
-    public DownloadTask(Context context, FloatingActionButton buttonText, String downloadUrl) {
+    public DownloadTask(Context context, FloatingActionButton buttonText, ProgressView progressView, String downloadUrl) {
         this.context = context;
+        activity = (Activity) context;
         this.downloadUrl = downloadUrl;
         pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
         downloadFileName = downloadUrl.replace(Utils.mainUrl, "").replace("%20", "");//Create file name by picking download file name from URL;
         this.Faba = buttonText;
+        this.progressView = progressView;
         Log.e(TAG, downloadFileName);
 
         //create a new directory since in api 30+ Environment.getExternalStorageDirectory() is depcracated
@@ -107,7 +116,9 @@ public class DownloadTask {
             {
                 intentPdf();
             }else {
-                Toast.makeText(context, "Internet connection needed to fetch the document", Toast.LENGTH_SHORT).show();
+                Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Internet connection needed to fetch the document",Snackbar.LENGTH_SHORT);
+                SnackBarHelper.configSnackbar(context, snack);
+                snack.show();
             }
         }
     }
@@ -115,12 +126,19 @@ public class DownloadTask {
 
     public  void InitDownloadTask() {
 
+
         int downloadId = PRDownloader.download(downloadUrl, dir_.getPath(), downloadFileName)
                 .build()
                 .setOnStartOrResumeListener(new OnStartOrResumeListener() {
                     @Override
                     public void onStartOrResume() {
-                        Toast.makeText(context,"started download",Toast.LENGTH_SHORT).show();
+                        progressView.setVisibility(View.VISIBLE);
+                        progressView.setProgress(0);
+                        progressView.setLabelText("Downloading.. "+"0%");
+                        Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Started Download",      Snackbar.LENGTH_SHORT);
+                        SnackBarHelper.configSnackbar(context, snack);
+                        snack.show();
+
                     }
                 })
                 .setOnPauseListener(new OnPauseListener() {
@@ -138,13 +156,17 @@ public class DownloadTask {
                 .setOnProgressListener(new OnProgressListener() {
                     @Override
                     public void onProgress(Progress progress) {
-
+                        progressView.setProgress((float)(progress.currentBytes/progress.totalBytes)*100);
+                        progressView.setLabelText("Downloading.. "+(progress.currentBytes/progress.totalBytes)*100+"%");
                     }
                 })
                 .start(new OnDownloadListener() {
                     @Override
                     public void onDownloadComplete() {
-                        Toast.makeText(context,"completed",Toast.LENGTH_SHORT).show();
+                        Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Download Complete",      Snackbar.LENGTH_SHORT);
+                        SnackBarHelper.configSnackbar(context, snack);
+                        snack.show();
+                        progressView.setVisibility(View.INVISIBLE);
                       intentPdf();
                     }
 
@@ -152,16 +174,24 @@ public class DownloadTask {
                     public void onError(Error error) {
                       if(error.isConnectionError())
                       {
-                          Toast.makeText(context,"Connection Error",Toast.LENGTH_SHORT).show();
+                          Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Connection Error",Snackbar.LENGTH_SHORT);
+                          SnackBarHelper_Error.configSnackbar(context, snack);
+                          snack.show();
                       }
                       else if (error.isServerError())
                       {
-                          Toast.makeText(context,"Server Error",Toast.LENGTH_SHORT).show();
+                          Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Server Error", Snackbar.LENGTH_SHORT);
+                          SnackBarHelper_Error.configSnackbar(context, snack);
+                          snack.show();
                       }
                       else
                       {
-                          Toast.makeText(context,"Error "+error.getResponseCode()+" "+error.getServerErrorMessage(),Toast.LENGTH_SHORT).show();
+                          Snackbar snack = Snackbar.make(activity.findViewById(android.R.id.content),"Unknown Error",Snackbar.LENGTH_SHORT);
+                          SnackBarHelper_Error.configSnackbar(context, snack);
+                          snack.show();
                       }
+
+                      progressView.setVisibility(View.INVISIBLE);
 
                     }
 

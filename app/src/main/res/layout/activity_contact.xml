@@ -43,6 +43,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
             android:orientation="vertical">
@@ -89,12 +90,12 @@
                 app:shimmer_duration="2300"
                 app:shimmer_shape="linear">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_marginTop="20dp"
                     android:paddingTop="5dp"
-                    android:src="@drawable/caribou_logo" />
+                    android:src="@drawable/emmanuel_me" />
             </com.facebook.shimmer.ShimmerFrameLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -126,7 +127,7 @@
             android:fontFamily="@font/amaranth_bold"
             android:gravity="center_horizontal"
 
-            android:text="CARIBOU DEVS"
+            android:text="Emmanuel_Be_Cool"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </com.facebook.shimmer.ShimmerFrameLayout>
 

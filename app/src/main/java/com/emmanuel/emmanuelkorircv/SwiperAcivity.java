@@ -67,7 +67,7 @@ public class SwiperAcivity extends AppCompatActivity {
             public void onPageChanged(int oldElementIndex, int newElementIndex) {
                 if (newElementIndex==2)
                 {
-                    snack = Snackbar.make(SwiperAcivity.this.findViewById(android.R.id.content),"Swipe right to continue",      Snackbar.LENGTH_SHORT);
+                    snack = Snackbar.make(SwiperAcivity.this.findViewById(android.R.id.content),"Swipe right to continue",Snackbar.LENGTH_SHORT);
                     SnackBarHelper.configSnackbar(SwiperAcivity.this, snack);
                     snack.show();
                     FloatNext.setVisibility(View.VISIBLE);
@@ -110,11 +110,11 @@ public class SwiperAcivity extends AppCompatActivity {
 
 
         // prepare data
-        PaperOnboardingPage scr1 = new PaperOnboardingPage("Hello", "I am a full Stack developer majoring in Software Development with BSC Computer Science",
+        PaperOnboardingPage scr1 = new PaperOnboardingPage("Hello", "I am a BSC Computer Science graduate majoring in software engineering",
                 Color.parseColor("#c6ffb3"), R.drawable.dragon, R.drawable.ic_key);
-        PaperOnboardingPage scr2 = new PaperOnboardingPage("About Me", "I am a software engineer with skills to create and deploy Solutions by creating working softwares and offer software consultany serivices.More can be viewed in my resume Application.",
+        PaperOnboardingPage scr2 = new PaperOnboardingPage("About Me", "I am a software engineer with software development agile methods skills and coding skills.More can be viewed in the Application.",
                 Color.parseColor("#b3ffff"), R.drawable.emmanuel_me, R.drawable.ic_programmer);
-        PaperOnboardingPage scr3 = new PaperOnboardingPage("About App", "This is a sample application to showcase Android Development platform capabilities with some of the latest trends in modern development with a standard UI developed and maintained by me.It also highlights my Resume details.",
+        PaperOnboardingPage scr3 = new PaperOnboardingPage("About App", "This is a sample application to showcase Android Development platform capabilities with some of the latest trends in modern development with a standard UI written in Java.It also highlights my Resume details.",
                 Color.parseColor("#6685EB"), R.drawable.android_robot, R.drawable.ic_android);
 
         ArrayList<PaperOnboardingPage> elements = new ArrayList<>();

@@ -33,7 +33,7 @@
         <activity
             android:name=".File_viewer"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBarTransparent" />
         <activity
             android:name=".My_data"
             android:exported="true"
@@ -61,11 +61,11 @@
         <activity
             android:name=".Contact"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBarTransparent" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBarTransparent" />
 
         <meta-data
             android:name="preloaded_fonts"

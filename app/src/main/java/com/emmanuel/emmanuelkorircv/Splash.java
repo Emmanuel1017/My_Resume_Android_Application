@@ -42,37 +42,37 @@ public class Splash extends AppCompatActivity {
 // a general rule, you should design your app to hide the status bar whenever you
 // hide the navigation bar.
         //persistent hide navbar
+
+        //persistent hide navbar
         currentApiVersion = android.os.Build.VERSION.SDK_INT;
         final View decorView = getWindow().getDecorView();
         final int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LOW_PROFILE ;
         decorView.setSystemUiVisibility(uiOptions);
 
-        decorView
-                .setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener()
-                {
 
-                    @Override
-                    public void onSystemUiVisibilityChange(int visibility)
-                    {
-                        if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0)
-                        {
-                            decorView.setSystemUiVisibility(uiOptions);
-                        }
-                    }
-                });
+
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener()
+        {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility)
+            {
+                if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0)
+                {
+                    decorView.setSystemUiVisibility(uiOptions);
+                }
+            }
+        });
 
         //persistent hide navbar end
 
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
-            setTheme(R.style.NoActionBar);
-        }else{
-            setTheme(R.style.AppTheme);
-        }
+
 
 
 

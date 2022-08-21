@@ -259,10 +259,10 @@ public class Contact extends AppCompatActivity {
             }
         });
 
-        ShimmerFrameLayout container = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container_name);
+        ShimmerFrameLayout container = findViewById(R.id.shimmer_view_container_name);
         container.startShimmer(); // If auto-start is set to false
 
-        ShimmerFrameLayout container1 = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_containerpic);
+        ShimmerFrameLayout container1 = findViewById(R.id.shimmer_view_containerpic);
         container1.startShimmer(); // If auto-start is set to false
 
 
@@ -326,7 +326,7 @@ public class Contact extends AppCompatActivity {
                     public void run() {
 
                         sDialog.dismiss();
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cariboudevs.com/"));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emmanuel.cariboudevs.com/"));
                 startActivity(browserIntent);
 
                     }
@@ -371,8 +371,6 @@ public class Contact extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-
-                        // TODO Auto-generated method stub
 
                         intent2 = new Intent(Intent.ACTION_CALL);
                         intent2.setData(Uri.parse("tel:"+"+254745317920"));

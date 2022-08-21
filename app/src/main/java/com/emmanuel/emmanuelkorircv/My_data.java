@@ -29,7 +29,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -43,6 +42,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.hanks.htextview.base.HTextView;
+import com.skydoves.progressview.ProgressView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -60,6 +60,7 @@ public class My_data extends AppCompatActivity {
     private static final int CAMERA_PERMISSION_CODE = 100;
     private static final int STORAGE_PERMISSION_CODE = 101;
     private HTextView LineT;
+    private ImageView Back;
     ArrayList<String> Arraymsgs = new ArrayList<>();
     ArrayList<Integer> Arrayclrs = new ArrayList<Integer>();
     int Position= 0;
@@ -69,6 +70,7 @@ public class My_data extends AppCompatActivity {
     private CollapsingToolbarLayout CollapseToolbar;
     private LinearLayout Linear1,Linear2,Linear3,Linear4,Linear5,Linear6,Linear7,Linear8,Linear9,Linear10,Linear11,Linear12,Linear13,Linear14,Linear15,Linear16,Linear17,Linear18,Linear19,Linear20,Linear21,Linear22,Linear23,Linear24,Linear25,Linear26,Linear27,Linear28;
 
+    private ProgressView Download_Progress;
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -97,9 +99,9 @@ public class My_data extends AppCompatActivity {
         View1=findViewById(R.id.view2_mydta);
         View2=findViewById(R.id.view3_mydata);
         MyView=findViewById(R.id.main_layout_mydata);
-        CollapseToolbar=findViewById(R.id.toolbar_layout);
         Backdata=findViewById(R.id.back_button_my_data);
 
+        Download_Progress = findViewById(R.id.progressView_download);
 
         Linear1=findViewById(R.id.Linear_View_1);
         Linear2=findViewById(R.id.Linear_View_2);
@@ -189,16 +191,7 @@ public class My_data extends AppCompatActivity {
         Faba =findViewById(R.id.fab);
 
 
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
 
-
-
-
-
-
-        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle("           My Resume");
 
 
 
@@ -212,13 +205,13 @@ public class My_data extends AppCompatActivity {
             MyView.setBackgroundColor(Color.parseColor("#4E4E4E"));
             Faba.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.black)));
             Faba.setImageDrawable(getDrawable(R.drawable.ic_pdf_file_dark));
-            CollapseToolbar.setBackground(getDrawable(R.drawable.dark_sky));
-            toolbar.setPopupTheme(R.style.Theme_EmmanuelKorirCV_NoActionBar);
 
 
 
 
         }
+
+        Download_Progress.setVisibility(View.INVISIBLE);
 
 
 
@@ -308,12 +301,54 @@ public class My_data extends AppCompatActivity {
 
 
 
-        FloatingActionButton fab = binding.fab;
+
+        /*//tool tip to show resume download
+        ViewTooltip
+                .on(My_data.this, Faba)
+                .autoHide(true, 1000)
+                .clickToHide(true)
+                //.align(ViewTooltip.ALIGN.START)
+                //.position(ViewTooltip.Position.TOP)
+                .text("Check out my resume")
+                .textColor(Color.WHITE)
+                .color(Color.BLUE)
+                .corner(10)
+                .arrowWidth(15)
+                .arrowHeight(15)
+                .distanceWithView(10)
+                //change the opening animation
+                .animation(new ViewTooltip.TooltipAnimation(){
+                    @Override
+                    public void animateEnter(View view, Animator.AnimatorListener animatorListener) {
+
+                    }
+
+                    @Override
+                    public void animateExit(View view, Animator.AnimatorListener animatorListener) {
+
+                    }
+                })
+
+                //listeners
+                .onDisplay(new ViewTooltip.ListenerDisplay() {
+                    @Override
+                    public void onDisplay(View view) {
+
+                    }
+                })
+                .onHide(new ViewTooltip.ListenerHide() {
+                    @Override
+                    public void onHide(View view) {
+
+                    }
+                })
+                .show();*/
+
+
         Faba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                            checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
+                checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
             }
         });
 
@@ -685,7 +720,7 @@ public class My_data extends AppCompatActivity {
             ActivityCompat.requestPermissions(My_data.this, new String[] { permission }, requestCode);
         }
         else {
-            new DownloadTask(My_data.this, Faba, Utils.downloadPdfUrl);
+            new DownloadTask(My_data.this, Faba,Download_Progress, Utils.downloadPdfUrl);
         }
     }
 
@@ -699,10 +734,9 @@ public class My_data extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
     if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(My_data.this, "Storage Permission Granted", Toast.LENGTH_SHORT).show();
-                new DownloadTask(My_data.this, Faba, Utils.downloadPdfUrl);
+                new DownloadTask(My_data.this, Faba,Download_Progress, Utils.downloadPdfUrl);
 
             } else {
                 final SweetAlertDialog CC = new SweetAlertDialog(My_data.this, SweetAlertDialog.WARNING_TYPE);
