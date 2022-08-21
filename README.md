@@ -93,7 +93,10 @@ It has the following aspects:
 * Auto generated QR code
 * Phone Stats and Info addon    
 * Timeline view 
-* Simple design and code.            
+* Simple design and code. 
+
+          
+![Uploading video1.gif…]()
 
 
 
