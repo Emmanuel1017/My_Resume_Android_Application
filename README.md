@@ -120,8 +120,11 @@ This project was developed using the following languges and apis:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To fork this project use the following in vscode cli:
+To fork this project use the following :
 
+ ```sh
+gh repo fork https://github.com/Emmanuel1017/My_Resume_Android_Application.git --clone
+ ```
 ### Prerequisites
 
 You need android studio and buildtools 31.0.0 sdk for easier build.
