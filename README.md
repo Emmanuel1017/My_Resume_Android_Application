@@ -25,7 +25,7 @@
 <br />
 <div align="center">
 
-  <a href="https://github.com/Emmanuel1017/Angular-Resume/">
+  <a href="https://github.com/Emmanuel1017/My_Resume_Android_Application/">
     <img src="https://user-images.githubusercontent.com/41972019/184505728-c9b1c4cc-9e2f-449e-bbdb-213bb05043f3.png" alt="Logo" >
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
    A simple resume application written in java to showcase a developers android skills.Focuses on design aspect with a card based dashboard and lots of animations .
     <br />
-    <a href="https://github.com/Emmanuel1017/Angular-Resume/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Emmanuel1017/My_Resume_Android_ApplicatioN/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Emmanuel1017/Angular-Resume/">Repository</a>
+    <a href="https://github.com/Emmanuel1017My_Resume_Android_Application/">Repository</a>
     ·
-    <a href="https://github.com/Emmanuel1017/Angular-Resume/issues">Report Bug</a>
+    <a href="https://github.com/Emmanuel1017/My_Resume_Android_Application/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Emmanuel1017/Angular-Resume/issues">Request Feature</a>
+    <a href="https://github.com/Emmanuel1017/My_Resume_Android_Application/issues">Request Feature</a>
   </p>
 </div>
 
@@ -130,19 +130,15 @@ You need npm to run the cli commands
 ### Installation
 
 
-1. This project requires nodejs
+1. This project requires android studio
 2. Clone the repo
    ```sh
-   git clone https://github.com/Emmanuel1017/Angular-Resume.git
+   git clone https://github.com/Emmanuel1017/My_Resume_Android_Applicatio.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4.  Run server over local-host`
-   ```sh
-   ng serve --configuration=en
-   ```
+3. get all gradle dependencies 
+
+4.  Build the projct and run it  
+ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
