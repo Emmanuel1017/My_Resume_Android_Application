@@ -31,6 +31,8 @@
 
   <h3 align="center">My Resume Android Application</h3>
 
+  ![Resume](https://user-images.githubusercontent.com/41972019/185812245-70a93d18-2623-4555-8866-e012919fc007.png)
+
   <p align="center">
    A simple resume application written in java to showcase a developers android skills.Focuses on design aspect with a card based dashboard and lots of animations .
     <br />
