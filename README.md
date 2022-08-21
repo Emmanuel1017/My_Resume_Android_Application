@@ -26,7 +26,7 @@
 <div align="center">
 
   <a href="https://github.com/Emmanuel1017/My_Resume_Android_Application/">
-    <img src="https://user-images.githubusercontent.com/41972019/184505728-c9b1c4cc-9e2f-449e-bbdb-213bb05043f3.png" alt="Logo" >
+    
   </a>
 
   <h3 align="center">My Resume Android Application</h3>
