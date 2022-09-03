@@ -20,6 +20,7 @@ import com.emmanuel.emmanuelkorircv.Utility.AppConstants;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MyExperiencesAdmin extends AppCompatActivity {
 
@@ -65,7 +66,9 @@ public class MyExperiencesAdmin extends AppCompatActivity {
         RecyclerViewExperiences.setAdapter(experiencesAdapter);
 
         // Collections.reverse(Blog_List);
+
         this.ExperiencesModelArrayList.addAll(ExperiencesModelArrayList);
+        Collections.reverse(this.ExperiencesModelArrayList);
         experiencesAdapter.notifyDataSetChanged();
         loadingPB.setVisibility(View.GONE);
     }

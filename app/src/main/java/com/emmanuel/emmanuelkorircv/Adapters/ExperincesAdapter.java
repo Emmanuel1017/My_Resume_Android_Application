@@ -48,6 +48,7 @@ public class ExperincesAdapter extends RecyclerView.Adapter<ExperincesAdapter.Vi
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         //setting data to our recycler view item on below line.
@@ -60,7 +61,7 @@ public class ExperincesAdapter extends RecyclerView.Adapter<ExperincesAdapter.Vi
         holder.Experiences_Role.setText(experiencesModel.getRole());
         holder.Experiences_Start_At.setText(experiencesModel.getStartAt());
         holder.Experiences_End_At.setText(experiencesModel.getEndAt());
-        holder.Experiences_Description.setText(experiencesModel.getDescription());
+        holder.Experiences_Description.setText("      "+experiencesModel.getDescription().replaceAll("<b>","").replaceAll("</b>",""));
 
 
         imageGlideHelper.load_And_Cache_image(context,holder.Experiences_Dp,experiencesModel.getLogo());

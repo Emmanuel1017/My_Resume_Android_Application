@@ -118,7 +118,7 @@
                                 android:paddingTop="5dp"
                                 android:paddingEnd="@dimen/margin_10dp"
                                 android:paddingBottom="5dp"
-                                android:text="Earn Through Watching Sponsored Ads"
+                                android:text="Manage My Web Blog"
                                 android:textColor="@color/white"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
