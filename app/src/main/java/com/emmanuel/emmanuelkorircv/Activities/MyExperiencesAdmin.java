@@ -57,7 +57,7 @@ public class MyExperiencesAdmin extends AppCompatActivity {
     {
         //retain original context
         Activity activity =(Activity) context;
-        RecyclerViewExperiences = activity.findViewById(R.id.Recycler_My_Blog_Admin);
+        RecyclerViewExperiences = activity.findViewById(R.id.Recycler_My_experiences_Admin);
         loadingPB = activity.findViewById(R.id.idPBLoading_my_blog_admin);
 
         RecyclerViewExperiences.setLayoutManager(new LinearLayoutManager(MyExperiencesAdmin.this,LinearLayoutManager.VERTICAL,false));
