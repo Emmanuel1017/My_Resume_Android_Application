@@ -36,6 +36,7 @@ public class SnackBarHelper {
         enter_animation(snack,context);
 
 
+
             //delay exit animation
             new Handler().postDelayed(new Runnable() {
 
@@ -43,6 +44,16 @@ public class SnackBarHelper {
                 public void run() {
 
                     exit_animation(snack, context);
+
+                    new Handler().postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+                            snack.dismiss();
+                        }
+                    }, 450);
+
                 }
             }, 1400);
 

@@ -9,26 +9,55 @@
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/exit2.xml" value="0.3455" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/experiences.xml" value="0.1995" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/experiences2.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_cat_green.xml" value="0.3455" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_snack.xml" value="0.1985" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_snack_error.xml" value="0.1995" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/gradient_snack_warning.xml" value="0.1995" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/ic_g_battle.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/ic_menu_options.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/ic_wave.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/outlined_button.xml" value="0.3455" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/preferences.xml" value="0.1995" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/preferences2.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/progress_bar.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/progress_bar_gradient.xml" value="0.1995" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/shadow_circle.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/unlock_pad.xml" value="0.3455" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/user.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/drawable/web.xml" value="0.3455" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/activity_photo_viewer.xml" value="0.12315930388219545" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/blog_item.xml" value="0.2389558232931727" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.12315930388219545" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/dialog_image_view.xml" value="0.2389558232931727" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w1240dp/experiences_item.xml" value="0.2389558232931727" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.14375" />
-        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_contact.xml" value="0.19166666666666668" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_admin_functions.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_contact.xml" value="0.33" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_file_viewer.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_main.xml" value="0.2921195652173913" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_my_about_admin.xml" value="0.3578125" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_my_blog_admin.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_my_data.xml" value="0.29257246376811596" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_my_experiences_admin.xml" value="0.3578125" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_others.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_photo_viewer.xml" value="0.19166666666666668" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/activity_terms.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/blog_item.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.33" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/contact_ilist_tem.xml" value="0.3578125" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/contact_item.xml" value="0.33" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/content_scrolling.xml" value="0.19166666666666668" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_call_layout.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_email_layout.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_exit_layout.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_image_view.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_website_layout.xml" value="0.371875" />
         <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/dialog_whatsapp_layout.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/experiences_item.xml" value="0.2921195652173913" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/fragment_admin_my_messeges.xml" value="0.371875" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/fragment_blog.xml" value="0.17760416666666667" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/fragment_data.xml" value="0.19166666666666668" />
+        <entry key="..\:/Coding projects/my pro/android 2021/emmanuelcv/app/src/main/res/layout/fragment_my_messeges.xml" value="0.19166666666666668" />
         <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/dark_mode.xml" value="0.3765625" />
         <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/gradient_card.xml" value="0.3765625" />
         <entry key="..\:/my pro/android 2021/emmanuelcv/app/src/main/res/drawable-v24/gradient_card_dark.xml" value="0.3765625" />

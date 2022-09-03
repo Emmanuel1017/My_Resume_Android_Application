@@ -5,19 +5,23 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.util.Log;
 
-import com.emmanuel.emmanuelkorircv.Preferences;
+import androidx.annotation.RequiresApi;
+
+import com.emmanuel.emmanuelkorircv.Activities.Preferences;
 
 public class InternetConnector_Receiver extends BroadcastReceiver {
     public InternetConnector_Receiver() {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onReceive(Context context, Intent intent) {
         try {
 
-            boolean isVisible = MyApplication.isActivityVisible();// Check if
+            boolean isVisible = App.isActivityVisible();// Check if
             // activity
             // is
             // visible

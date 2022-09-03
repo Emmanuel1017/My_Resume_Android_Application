@@ -13,4 +13,6 @@
     <string name="call_me">Call Me</string>
     <string name="my_cv">MY RESUME</string>
     <string name="title_activity_my_data">My_data</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.AdminFunctions">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_admin"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imBack_admin_functions"
+                android:layout_width="34dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="0dp"
+                android:background="#00000000"
+                android:elevation="50dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.emmanuel.emmanuelkorircv.Utility.navigationtabstrip.NavigationTabStrip
+                android:id="@+id/viewpagertab_profile"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                app:nts_color="@color/purple_700"
+                app:nts_size="13sp"
+                app:nts_weight="3dp"
+                app:nts_factor="2.5"
+                app:nts_type="point"
+                app:nts_gravity="bottom"
+                app:nts_typeface="fonts/typeface.otf"
+                app:nts_corners_radius="1.5dp"
+                app:nts_animation_duration="300"
+                app:nts_active_color="@color/blueDark"
+                app:nts_inactive_color="#7A7878"/>
+
+        </LinearLayout>
+
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

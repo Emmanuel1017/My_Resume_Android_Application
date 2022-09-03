@@ -6,4 +6,10 @@
 
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_30">30dp</dimen>
+
+    <dimen name="margin_dp">15dp</dimen>
+    <dimen name="circle_progress">35dp</dimen>
+
+
+    <dimen name="txt_size_20">20sp</dimen>
 </resources>

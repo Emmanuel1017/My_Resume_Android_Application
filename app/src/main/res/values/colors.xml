@@ -13,7 +13,6 @@
     <color name="transparent">#52888888</color>
     <color name="transparentWhite">#00000000</color>
 
-    <color name="pink">#F30570</color>
     <color name="message_bubble_grey">#e0e0e0</color>
 
     <color name="grey">#B96B6B6B</color>
@@ -35,6 +34,15 @@
     <color name="light_blue_900">#FF01579B</color>
 
     <color name="cardColor">#ffffff</color>
+
+
+    <!-- background color of lifeline bg nd main page bottom bg colors -->
+    <color name="sky">#439BD2</color>
+    <color name="sky_light">#73E1C0</color>
+    <color name="pink">#C40F8E</color>
+    <color name="pink_light">#FB5293</color>
+    <color name="green_">#3C8346</color>
+    <color name="green_light">#8BD188</color>
 
 
 </resources>
