@@ -40,7 +40,7 @@ public class MyExperiencesAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_experiences_admin);
 
-        Back = findViewById(R.id.back_button_experiences);
+        Back = findViewById(R.id.back_my_experiences);
 
         Back.setOnClickListener(new View.OnClickListener() {
             @Override

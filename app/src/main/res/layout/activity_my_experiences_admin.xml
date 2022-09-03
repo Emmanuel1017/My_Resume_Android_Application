@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MyExperiencesAdmin">
 
+    <ImageView
+        android:id="@+id/back_my_experiences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/margin_20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
